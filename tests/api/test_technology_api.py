@@ -44,8 +44,8 @@ def technology(client, session):
     session.add(sxd)
     session.flush()
     classes = {
-        kind: call(client, "POST", "/api/technology/classes", 201, json={"kind": kind, "code": kind, "name": kind})["id"]
-        for kind in ("operation", "profession", "work_center")
+        kind: call(client, "POST", "/api/technology/classes", 201, json={"kind": kind, "code": kind, "name": name})["id"]
+        for kind, name in (("operation", "Приготовление"), ("profession", "Повар"), ("work_center", "Кухня"))
     }
     center = call(client, "POST", "/api/technology/work-centers", 201, json={
         "code": "kitchen", "name": "Рабочий центр", "class_id": classes["work_center"], "sxd_id": sxd.id,
@@ -102,6 +102,7 @@ def test_nested_route_norms_and_cost(client, session, technology):
         (flour.id, "Мука", catalog.uq[("Мука", "кг")].id, D("2.05"), "кг"),
     ]
     labor, = call(client, "GET", route(product) + "/labor", params={"quantity": 4})
+    assert labor["profession_name"] == "Повар"
     assert [D(labor[key]) for key in ("setup_minutes", "piece_minutes", "total_minutes")] == [D(20), D(43), D(63)]
 
     price_set = PricelistSet()

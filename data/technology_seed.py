@@ -18,7 +18,8 @@ def seed_technology(session, items, units, enums, department_id):
 
     operation_class = service.save_class(ClassCreate(kind="operation", code="cooking", name="Приготовление"))
     packing_class = service.save_class(ClassCreate(kind="operation", code="packing", name="Фасовка"))
-    profession = service.save_class(ClassCreate(kind="profession", code="cook", name="Повар"))
+    cook = service.save_class(ClassCreate(kind="profession", code="cook", name="Повар"))
+    packer = service.save_class(ClassCreate(kind="profession", code="packer", name="Упаковщик"))
     center_class = service.save_class(ClassCreate(kind="work_center", code="kitchen", name="Производственная кухня"))
     center = service.save_work_center(WorkCenterCreate(
         code="KITCHEN-1", name="Горячий цех", class_id=center_class.id, sxd_id=department_id,
@@ -29,7 +30,8 @@ def seed_technology(session, items, units, enums, department_id):
         service.save_asset(AssetCreate(inventory_number=inventory, model_id=model.id, work_center_id=center.id))
 
     qualification = enums["qualification.grade_3"]
-    service.put_rate(profession.id, qualification.id, Decimal("360"))
+    service.put_rate(cook.id, qualification.id, Decimal("360"))
+    service.put_rate(packer.id, qualification.id, Decimal("240"))
     price_set = add(PricelistSet())
     operations = {}
     for index, (name, item) in enumerate(items.items(), start=1):
@@ -41,7 +43,7 @@ def seed_technology(session, items, units, enums, department_id):
         add(Pricelist(pricelist_set_id=price_set.id, item_id=item.id, price=Decimal(25 + 5 * index)))
 
     production = dict(
-        kind="production", work_center_id=center.id, profession_id=profession.id, qualification_id=qualification.id,
+        kind="production", work_center_id=center.id, profession_id=cook.id, qualification_id=qualification.id,
     )
 
     def from_bom(name, description, minutes, class_id=operation_class.id):
@@ -69,8 +71,8 @@ def seed_technology(session, items, units, enums, department_id):
                      {"input_key": "cheese", "quantity": {"factors": {"cheese_g": 1}}},
                      {"input_key": "topping", "quantity": {"factors": {"topping_g": 1}}},
                  ]),
-            dict(production, class_id=packing_class.id, number=20, name="Пицца после упаковки", is_output=True,
-                 piece_minutes={"constant": 1}, inputs=[
+            dict(production, class_id=packing_class.id, profession_id=packer.id,
+                 number=20, name="Пицца после упаковки", is_output=True, piece_minutes={"constant": 1}, inputs=[
                      {"input_number": 10, "quantity": {"constant": 1}}, norm("box", 1),
                  ]),
         ]},

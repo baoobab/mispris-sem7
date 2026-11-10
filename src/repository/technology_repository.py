@@ -122,11 +122,16 @@ class TechnologyRepository:
         ).mappings().all()
 
     def labor(self, item_id: int, quantity: Decimal, with_rates=False):
-        query = "SELECT l.* FROM tr_to(:id, CAST(:quantity AS numeric)) l"
         if with_rates:
             query = """
                 SELECT l.*, r.hourly_rate FROM tr_to(:id, CAST(:quantity AS numeric)) l
                 LEFT JOIN technology_labor_rate r USING (profession_id, qualification_id)
+            """
+        else:
+            query = """
+                SELECT l.*, p.name AS profession_name
+                FROM tr_to(:id, CAST(:quantity AS numeric)) l
+                JOIN technology_class p ON p.id = l.profession_id
             """
         return self.session.execute(
             text(query + " ORDER BY l.profession_id, l.qualification_id"), {"id": item_id, "quantity": quantity},

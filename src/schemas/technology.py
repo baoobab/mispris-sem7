@@ -151,12 +151,16 @@ class OperationMaterialNorm(MaterialNorm):
     in_operation_id: int
 
 
-class LaborNorm(TechnologySchema):
+class LaborMinutes(TechnologySchema):
     profession_id: int
     qualification_id: int
     setup_minutes: Decimal
     piece_minutes: Decimal
     total_minutes: Decimal
+
+
+class LaborNorm(LaborMinutes):
+    profession_name: str = Field(description="Название профессии")
 
 
 class LaborRate(TechnologySchema):
@@ -173,7 +177,7 @@ class MaterialCost(MaterialQuantity):
     cost: Decimal
 
 
-class LaborCost(LaborNorm):
+class LaborCost(LaborMinutes):
     hourly_rate: Decimal
     cost: Decimal
 
