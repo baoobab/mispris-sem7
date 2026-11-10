@@ -1,5 +1,6 @@
 from datetime import datetime, timezone
 from decimal import Decimal, ROUND_HALF_UP, localcontext
+from graphlib import TopologicalSorter
 
 from pydantic import ValidationError
 
@@ -219,14 +220,19 @@ class TechnologyService:
     def find_route(self, item_id: int):
         self.repo.lock_graph(shared=True)
         output = self._output(item_id)
-        rows = self.repo.route_operations(item_id)
-        ids = [row.id for row, _ in rows]
+        operations = {
+            row.id: RouteOperation(**OperationRead.model_validate(row).model_dump(), depth=depth)
+            for row, depth in self.repo.route_operations(item_id)
+        }
+        ids = list(operations)
+        inputs = self.repo.inputs(ids)
+        execution = TopologicalSorter({operation_id: () for operation_id in ids})
+        for edge in inputs:
+            execution.add(edge.out_operation_id, edge.in_operation_id)
         return dict(
             item_id=item_id, output_operation_id=output.id,
-            operations=[
-                RouteOperation(**OperationRead.model_validate(row).model_dump(), depth=depth) for row, depth in rows
-            ],
-            inputs=self.repo.inputs(ids), tools=self.repo.tools(ids),
+            operations=[operations[operation_id] for operation_id in execution.static_order()],
+            inputs=inputs, tools=self.repo.tools(ids),
         )
 
     def direct_materials(self, item_id: int, operation_id: int, quantity: Decimal):

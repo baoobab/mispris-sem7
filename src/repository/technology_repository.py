@@ -79,7 +79,7 @@ class TechnologyRepository:
         return self.session.exec(
             select(TechnologyOperation, route.c.depth).select_from(TechnologyOperation)
             .join(route, route.c.operation_id == TechnologyOperation.id)
-            .order_by(route.c.depth, TechnologyOperation.item_id, TechnologyOperation.number)
+            .order_by(TechnologyOperation.item_id, TechnologyOperation.number)
         ).all()
 
     def inputs(self, operation_ids: list[int]):
@@ -93,13 +93,24 @@ class TechnologyRepository:
         ).order_by(TechnologyToolRequirement.operation_id, TechnologyToolRequirement.model_id)).all()
 
     def direct_materials(self, operation_id: int, quantity: Decimal):
-        return self.session.execute(text(
-            "SELECT * FROM mr_q(:id, CAST(:quantity AS numeric)) ORDER BY in_operation_id"
-        ), {"id": operation_id, "quantity": quantity}).mappings().all()
+        return self.session.execute(text("""
+            SELECT m.*, i.name AS item_name, COALESCE(NULLIF(u.cond_symbol_1, ''), u.name) AS unit_symbol
+            FROM mr_q(:id, CAST(:quantity AS numeric)) m
+            JOIN item i ON i.id = m.item_id
+            JOIN unit_quantity uq ON uq.id = m.unit_quantity_id
+            JOIN unit_simple u ON u.id = uq.unit_simple_id
+            ORDER BY m.in_operation_id
+        """), {"id": operation_id, "quantity": quantity}).mappings().all()
 
     def materials(self, item_id: int, quantity: Decimal, price_set_id: int | None = None):
         if price_set_id is None:
-            query = "SELECT m.* FROM sum_mr(:id, CAST(:quantity AS numeric)) m"
+            query = """
+                SELECT m.*, i.name AS item_name, COALESCE(NULLIF(u.cond_symbol_1, ''), u.name) AS unit_symbol
+                FROM sum_mr(:id, CAST(:quantity AS numeric)) m
+                JOIN item i ON i.id = m.item_id
+                JOIN unit_quantity uq ON uq.id = m.unit_quantity_id
+                JOIN unit_simple u ON u.id = uq.unit_simple_id
+            """
         else:
             query = """
                 SELECT m.*, p.price FROM sum_mr(:id, CAST(:quantity AS numeric)) m

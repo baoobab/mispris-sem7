@@ -85,14 +85,21 @@ def test_nested_route_norms_and_cost(client, session, technology):
 
     data = call(client, "GET", route(product) + "/route")
     assert data["output_operation_id"] == pack
+    assert [op["id"] for op in data["operations"]] == [raw, prep, cook, pack]
     assert {op["id"]: op["depth"] for op in data["operations"]} == {pack: 0, cook: 1, prep: 1, raw: 2}
     assert len(data["inputs"]) == 5
     assert data["tools"] == [tool]
     direct = call(client, "GET", route(product) + f"/operations/{pack}/materials", params={"quantity": 4})
-    assert {r["in_operation_id"]: D(r["quantity"]) for r in direct} == {cook: D(8), prep: D(6)}
+    assert {r["in_operation_id"]: (r["item_name"], D(r["quantity"]), r["unit_symbol"]) for r in direct} == {
+        cook: ("Блюдо", D(8), "шт"),
+        prep: ("Заготовка", D(6), "кг"),
+    }
     materials = call(client, "GET", route(product) + "/materials", params={"quantity": 4})
-    assert [(r["item_id"], r["unit_quantity_id"], D(r["quantity"])) for r in materials] == [
-        (flour.id, catalog.uq[("Мука", "кг")].id, D("2.05")),
+    assert [
+        (r["item_id"], r["item_name"], r["unit_quantity_id"], D(r["quantity"]), r["unit_symbol"])
+        for r in materials
+    ] == [
+        (flour.id, "Мука", catalog.uq[("Мука", "кг")].id, D("2.05"), "кг"),
     ]
     labor, = call(client, "GET", route(product) + "/labor", params={"quantity": 4})
     assert [D(labor[key]) for key in ("setup_minutes", "piece_minutes", "total_minutes")] == [D(20), D(43), D(63)]

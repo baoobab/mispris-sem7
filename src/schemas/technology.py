@@ -136,10 +136,15 @@ class RouteRead(TechnologySchema):
     tools: list[ToolRead]
 
 
-class MaterialNorm(TechnologySchema):
+class MaterialQuantity(TechnologySchema):
     item_id: int
     unit_quantity_id: int
     quantity: Decimal
+
+
+class MaterialNorm(MaterialQuantity):
+    item_name: str = Field(description="Название ресурса")
+    unit_symbol: str = Field(description="Обозначение базовой единицы измерения ресурса")
 
 
 class OperationMaterialNorm(MaterialNorm):
@@ -163,7 +168,7 @@ class LaborRateRead(LaborRate):
     qualification_id: int
 
 
-class MaterialCost(MaterialNorm):
+class MaterialCost(MaterialQuantity):
     price: Decimal
     cost: Decimal
 
