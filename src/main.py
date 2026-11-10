@@ -17,6 +17,7 @@ from src.routers import (
     positions,
     roles,
     sxd,
+    technology,
     units,
 )
 
@@ -26,7 +27,8 @@ app = FastAPI(
     description=(
         "API информационной системы сервиса доставки готовой еды: классификаторы, перечисления, "
         "параметры, справочник изделий, хозяйственные операции (№4) и материальные спецификации "
-        "изделий — BOM, модификации, история изменений, сводные нормы расхода (№5)."
+        "изделий — BOM, модификации, история изменений, сводные нормы расхода (№5). "
+        "Маршрутная технология, типовые процессы, нормы расхода, трудоёмкость и себестоимость (№6)."
     ),
 )
 
@@ -55,6 +57,10 @@ app.include_router(items.router, prefix="/api/items", tags=["Номенклат�
 app.include_router(bom.router, prefix="/api/items", tags=["Спецификации изделий (BOM)"])
 app.include_router(packaging.router, prefix="/api/packaging", tags=["Упаковка"])
 app.include_router(positions.router, prefix="/api/positions", tags=["Позиции и прейскуранты"])
+app.include_router(technology.catalog_router, prefix="/api/technology", tags=["Справочники технологии"])
+app.include_router(
+    technology.route_router, prefix="/api/items/{item_id}/technology", tags=["Маршрутная технология"],
+)
 
 
 @app.get("/health", tags=["Служебное"])

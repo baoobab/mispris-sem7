@@ -10,6 +10,18 @@ from src.models.parameters import Parameter
 from src.models.positions import HoPosition, Pricelist, PricelistSet, PositionList
 from src.models.roles import AvailableRoles, SxdRole
 from src.models.sxd import Sxd
+from src.models.technology import (
+    TechnologyApplication,
+    TechnologyAsset,
+    TechnologyAssetModel,
+    TechnologyClass,
+    TechnologyInput,
+    TechnologyLaborRate,
+    TechnologyOperation,
+    TechnologyTemplate,
+    TechnologyToolRequirement,
+    WorkCenter,
+)
 from src.models.units import UnitSimple
 
 __all__ = [
@@ -43,4 +55,14 @@ __all__ = [
     "HoPosition",
     "ItemBom",
     "ItemChange",
+    "TechnologyApplication",
+    "TechnologyAsset",
+    "TechnologyAssetModel",
+    "TechnologyClass",
+    "TechnologyInput",
+    "TechnologyLaborRate",
+    "TechnologyOperation",
+    "TechnologyTemplate",
+    "TechnologyToolRequirement",
+    "WorkCenter",
 ]

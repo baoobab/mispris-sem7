@@ -1,4 +1,4 @@
-"""Демо-данные «Сервис доставки готовой еды» для показа заданий №4–5.
+"""Демо-данные «Сервис доставки готовой еды» для показа заданий №4–6.
 
 ВНИМАНИЕ: полностью очищает БД из DATABASE_URL (.env) и заполняет заново.
 
@@ -17,6 +17,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 from sqlalchemy import text  # noqa: E402
 from sqlmodel import Session  # noqa: E402
 
+from data.technology_seed import seed_technology  # noqa: E402
 from src.database.database import SessionLocal  # noqa: E402
 from src.models import (  # noqa: E402
     AvailableRoles,
@@ -73,9 +74,15 @@ REFERENCE_ENUMS = {
         ("individual", "ИП"),
         ("dept", "Подразделение"),
     ],
+    ("qualification", "Квалификация"): [
+        ("grade_3", "3-й разряд"),
+    ],
 }
 
 TABLES = (
+    "technology_application, technology_template, technology_asset, technology_asset_model, "
+    "technology_labor_rate, technology_tool_requirement, technology_input, technology_operation, "
+    "work_center, technology_class, "
     "item_change, item_bom, ho_position, position_list, pricelist, pricelist_set, packaging_norm, "
     "packaging, packaging_type, item_batch, unit_quantity, item, doc_parameter_value, "
     "ho_parameter_value, sxd_role_in_ho, document, ho, sxd, available_roles, doc_class_parameter, "
@@ -225,6 +232,7 @@ def seed(session: Session) -> None:
     svc.remove_component(mod.id, items["Базилик свежий"].id, reason="Базилик не сочетается с халапеньо")
     svc.add_component(mod.id, BomComponentAdd(component_item_id=items["Коробка для пиццы 30 см"].id,
                                               quantity=D("1"), order_number=7, reason="Своя упаковка"))
+    items[mod.name] = mod
 
     # ---------- минимум для задания №4 (ХО «Доставка заказа»)
     sxd_cls = add(session, SxdClassifier(name="Контрагенты", code="contractors"))
@@ -240,6 +248,8 @@ def seed(session: Session) -> None:
         role = add(session, SxdRole(name=role_name))
         add(session, AvailableRoles(ho_type_id=delivery.id, role_id=role.id, min_count=1, max_count=1,
                                     is_required=True))
+    kitchen = add(session, Sxd(name="Горячий цех", entity_type_id=ev["sxd_type.dept"].id))
+    seed_technology(session, items, uq, ev, kitchen.id)
     _ = date.today()
 
 
