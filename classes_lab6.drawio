@@ -1,0 +1,554 @@
+<mxfile host="app.diagrams.net" agent="Codex">
+  <diagram id="classes_lab6" name="Классы — задание №6">
+    <mxGraphModel dx="1617" dy="676" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1900" pageHeight="1930" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="class_technology_asset_model" parent="1" style="swimlane;fontStyle=1;align=center;startSize=26;container=1;collapsible=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;html=0;" tooltip="technology_asset_model" value="Модель средства труда" vertex="1">
+          <mxGeometry height="189" width="480" x="1301" y="687" as="geometry" />
+        </mxCell>
+        <mxCell id="attribute_technology_asset_model__id" parent="class_technology_asset_model" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" tooltip="id" value="+Идентификатор" vertex="1">
+          <mxGeometry height="22" width="480" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="attribute_technology_asset_model__code" parent="class_technology_asset_model" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" tooltip="code" value="+Код" vertex="1">
+          <mxGeometry height="22" width="480" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="attribute_technology_asset_model__name" parent="class_technology_asset_model" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" tooltip="name" value="+Имя" vertex="1">
+          <mxGeometry height="22" width="480" y="76" as="geometry" />
+        </mxCell>
+        <mxCell id="attribute_technology_asset_model__kind" parent="class_technology_asset_model" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" tooltip="kind" value="+Вид" vertex="1">
+          <mxGeometry height="22" width="480" y="98" as="geometry" />
+        </mxCell>
+        <mxCell id="divider_technology_asset_model" parent="class_technology_asset_model" style="line;strokeWidth=1;fillColor=none;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="10" width="480" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="method_technology_asset_model__0" parent="class_technology_asset_model" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" value="+Создать()" vertex="1">
+          <mxGeometry height="22" width="480" y="132" as="geometry" />
+        </mxCell>
+        <mxCell id="method_technology_asset_model__1" parent="class_technology_asset_model" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" value="+Получить()" vertex="1">
+          <mxGeometry height="22" width="480" y="154" as="geometry" />
+        </mxCell>
+        <mxCell id="class_technology_class" parent="1" style="swimlane;fontStyle=1;align=center;startSize=26;container=1;collapsible=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;html=0;" tooltip="technology_class" value="Класс маршрутной технологии" vertex="1">
+          <mxGeometry height="191" width="480" x="60" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="attribute_technology_class__kind" parent="class_technology_class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" tooltip="kind" value="+Вид" vertex="1">
+          <mxGeometry height="22" width="480" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="attribute_technology_class__code" parent="class_technology_class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" tooltip="code" value="+Код" vertex="1">
+          <mxGeometry height="22" width="480" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="attribute_technology_class__name" parent="class_technology_class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" tooltip="name" value="+Имя" vertex="1">
+          <mxGeometry height="22" width="480" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="divider_technology_class" parent="class_technology_class" style="line;strokeWidth=1;fillColor=none;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="10" width="480" y="96" as="geometry" />
+        </mxCell>
+        <mxCell id="method_technology_class__0" parent="class_technology_class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" value="+Создать()" vertex="1">
+          <mxGeometry height="22" width="480" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="method_technology_class__1" parent="class_technology_class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" value="+Получить()" vertex="1">
+          <mxGeometry height="22" width="480" y="132" as="geometry" />
+        </mxCell>
+        <mxCell id="method_technology_class__2" parent="class_technology_class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" value="+Изменить()" vertex="1">
+          <mxGeometry height="22" width="480" y="154" as="geometry" />
+        </mxCell>
+        <mxCell id="class_technology_template" parent="1" style="swimlane;fontStyle=1;align=center;startSize=26;container=1;collapsible=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;html=0;" tooltip="technology_template" value="Типовой технологический процесс" vertex="1">
+          <mxGeometry height="198" width="480" x="1300" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="attribute_technology_template__id" parent="class_technology_template" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" tooltip="id" value="+Идентификатор" vertex="1">
+          <mxGeometry height="22" width="480" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="attribute_technology_template__code" parent="class_technology_template" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" tooltip="code" value="+Код" vertex="1">
+          <mxGeometry height="22" width="480" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="attribute_technology_template__name" parent="class_technology_template" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" tooltip="name" value="+Имя" vertex="1">
+          <mxGeometry height="22" width="480" y="76" as="geometry" />
+        </mxCell>
+        <mxCell id="attribute_technology_template__definition" parent="class_technology_template" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" tooltip="definition" value="+ОпределениеПроцесса" vertex="1">
+          <mxGeometry height="22" width="480" x="1" y="98" as="geometry" />
+        </mxCell>
+        <mxCell id="divider_technology_template" parent="class_technology_template" style="line;strokeWidth=1;fillColor=none;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="10" width="480" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="method_technology_template__0" parent="class_technology_template" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" value="+Создать()" vertex="1">
+          <mxGeometry height="22" width="480" y="132" as="geometry" />
+        </mxCell>
+        <mxCell id="method_technology_template__1" parent="class_technology_template" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" value="+Получить()" vertex="1">
+          <mxGeometry height="22" width="480" y="154" as="geometry" />
+        </mxCell>
+        <mxCell id="method_technology_template__2" parent="class_technology_template" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" value="+Применить()" vertex="1">
+          <mxGeometry height="22" width="480" y="176" as="geometry" />
+        </mxCell>
+        <mxCell id="class_item" parent="1" style="swimlane;fontStyle=1;align=center;startSize=26;container=1;collapsible=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;html=0;" tooltip="item" value="Изделие" vertex="1">
+          <mxGeometry height="210" width="480" x="670" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="attribute_item__id" parent="class_item" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" tooltip="id" value="+Идентификатор" vertex="1">
+          <mxGeometry height="22" width="480" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="attribute_item__number" parent="class_item" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" tooltip="number" value="+Номер" vertex="1">
+          <mxGeometry height="22" width="480" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="attribute_item__name" parent="class_item" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" tooltip="name" value="+Имя" vertex="1">
+          <mxGeometry height="22" width="480" y="76" as="geometry" />
+        </mxCell>
+        <mxCell id="divider_item" parent="class_item" style="line;strokeWidth=1;fillColor=none;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="10" width="480" y="98" as="geometry" />
+        </mxCell>
+        <mxCell id="method_item__0" parent="class_item" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" value="+FIND_TM()" vertex="1">
+          <mxGeometry height="22" width="480" y="108" as="geometry" />
+        </mxCell>
+        <mxCell id="method_item__1" parent="class_item" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" value="+SUM_MR()" vertex="1">
+          <mxGeometry height="22" width="480" y="132" as="geometry" />
+        </mxCell>
+        <mxCell id="method_item__2" parent="class_item" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" value="+TR_TO()" vertex="1">
+          <mxGeometry height="22" width="480" y="154" as="geometry" />
+        </mxCell>
+        <mxCell id="method_item__3" parent="class_item" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" value="+РассчитатьСебестоимость()" vertex="1">
+          <mxGeometry height="22" width="480" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="relation_item__base_item_id" edge="1" parent="class_item" source="attribute_item__id" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;endArrow=none;labelBackgroundColor=#FFFFFF;startArrow=open;startFill=0;exitX=1;exitY=0;entryX=1;entryY=0.25;exitDx=0;exitDy=0;entryDx=0;entryDy=0;endFill=0;innerLoopWaypoints=1;" target="method_item__0" tooltip="Ассоциация: item &lt;-&gt; item.base_item_id" value="БазовоеИзделие">
+          <mxGeometry relative="1" x="-0.0273" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="540" y="32" />
+              <mxPoint x="540" y="113.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_item__base_item_id__source" connectable="0" parent="relation_item__base_item_id" style="edgeLabel;html=0;align=center;verticalAlign=middle;resizable=0;fontColor=#000000;labelBackgroundColor=#FFFFFF;" value="0..1" vertex="1">
+          <mxGeometry relative="1" x="-0.9107" y="14" as="geometry">
+            <mxPoint x="11" y="25" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_item__base_item_id__target" connectable="0" parent="relation_item__base_item_id" style="edgeLabel;html=0;align=center;verticalAlign=middle;resizable=0;fontColor=#000000;labelBackgroundColor=#FFFFFF;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.7559" y="14" as="geometry">
+            <mxPoint x="-4" y="-24" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="class_technology_labor_rate" parent="1" style="swimlane;fontStyle=1;align=center;startSize=26;container=1;collapsible=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;html=0;" tooltip="technology_labor_rate" value="Часовая ставка" vertex="1">
+          <mxGeometry height="116" width="480" x="60" y="314" as="geometry" />
+        </mxCell>
+        <mxCell id="attribute_technology_labor_rate__hourly_rate" parent="class_technology_labor_rate" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" tooltip="hourly_rate" value="+ЧасоваяСтавка" vertex="1">
+          <mxGeometry height="22" width="480" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="divider_technology_labor_rate" parent="class_technology_labor_rate" style="line;strokeWidth=1;fillColor=none;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="10" width="480" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="method_technology_labor_rate__0" parent="class_technology_labor_rate" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" value="+Задать()" vertex="1">
+          <mxGeometry height="22" width="480" y="68" as="geometry" />
+        </mxCell>
+        <mxCell id="method_technology_labor_rate__1" parent="class_technology_labor_rate" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" value="+Получить()" vertex="1">
+          <mxGeometry height="22" width="480" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="class_technology_application" parent="1" style="swimlane;fontStyle=1;align=center;startSize=26;container=1;collapsible=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;html=0;" tooltip="technology_application" value="Применение типового технологического процесса" vertex="1">
+          <mxGeometry height="137" width="480" x="1300" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="attribute_technology_application__parameters" parent="class_technology_application" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" tooltip="parameters" value="+ЗначенияПараметров" vertex="1">
+          <mxGeometry height="22" width="480" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="attribute_technology_application__resources" parent="class_technology_application" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" tooltip="resources" value="+ПривязкиРесурсов" vertex="1">
+          <mxGeometry height="22" width="480" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="divider_technology_application" parent="class_technology_application" style="line;strokeWidth=1;fillColor=none;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="10" width="480" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="method_technology_application__0" parent="class_technology_application" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" value="+Создать()" vertex="1">
+          <mxGeometry height="22" width="480" y="84" as="geometry" />
+        </mxCell>
+        <mxCell id="method_technology_application__1" parent="class_technology_application" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" value="+ПолучитьПараметры()" vertex="1">
+          <mxGeometry height="22" width="480" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="class_work_center" parent="1" style="swimlane;fontStyle=1;align=center;startSize=26;container=1;collapsible=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;html=0;" tooltip="work_center" value="Групповой рабочий центр" vertex="1">
+          <mxGeometry height="176" width="480" x="60" y="523" as="geometry" />
+        </mxCell>
+        <mxCell id="attribute_work_center__id" parent="class_work_center" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" tooltip="id" value="+Идентификатор" vertex="1">
+          <mxGeometry height="22" width="480" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="attribute_work_center__code" parent="class_work_center" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" tooltip="code" value="+Код" vertex="1">
+          <mxGeometry height="22" width="480" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="attribute_work_center__name" parent="class_work_center" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" tooltip="name" value="+Имя" vertex="1">
+          <mxGeometry height="22" width="480" y="76" as="geometry" />
+        </mxCell>
+        <mxCell id="divider_work_center" parent="class_work_center" style="line;strokeWidth=1;fillColor=none;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="10" width="480" y="98" as="geometry" />
+        </mxCell>
+        <mxCell id="method_work_center__0" parent="class_work_center" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" value="+Создать()" vertex="1">
+          <mxGeometry height="22" width="480" y="108" as="geometry" />
+        </mxCell>
+        <mxCell id="method_work_center__1" parent="class_work_center" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" value="+Получить()" vertex="1">
+          <mxGeometry height="22" width="480" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="method_work_center__2" parent="class_work_center" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" value="+Изменить()" vertex="1">
+          <mxGeometry height="22" width="480" y="152" as="geometry" />
+        </mxCell>
+        <mxCell id="class_technology_asset" parent="1" style="swimlane;fontStyle=1;align=center;startSize=26;container=1;collapsible=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;html=0;" tooltip="technology_asset" value="Инвентарная единица средства труда" vertex="1">
+          <mxGeometry height="189" width="480" x="60" y="807" as="geometry" />
+        </mxCell>
+        <mxCell id="attribute_technology_asset__id" parent="class_technology_asset" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" tooltip="id" value="+Идентификатор" vertex="1">
+          <mxGeometry height="22" width="480" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="attribute_technology_asset__inventory_number" parent="class_technology_asset" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" tooltip="inventory_number" value="+ИнвентарныйНомер" vertex="1">
+          <mxGeometry height="22" width="480" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="divider_technology_asset" parent="class_technology_asset" style="line;strokeWidth=1;fillColor=none;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="10" width="480" y="76" as="geometry" />
+        </mxCell>
+        <mxCell id="method_technology_asset__0" parent="class_technology_asset" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" value="+Создать()" vertex="1">
+          <mxGeometry height="22" width="480" y="91" as="geometry" />
+        </mxCell>
+        <mxCell id="method_technology_asset__1" parent="class_technology_asset" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" value="+Получить()" vertex="1">
+          <mxGeometry height="22" width="480" y="113" as="geometry" />
+        </mxCell>
+        <mxCell id="method_technology_asset__2" parent="class_technology_asset" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" value="+Изменить()" vertex="1">
+          <mxGeometry height="22" width="480" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="method_technology_asset__3" parent="class_technology_asset" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" value="+Удалить()" vertex="1">
+          <mxGeometry height="22" width="480" y="157" as="geometry" />
+        </mxCell>
+        <mxCell id="class_technology_operation" parent="1" style="swimlane;fontStyle=1;align=center;startSize=26;container=1;collapsible=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;html=0;" tooltip="technology_operation" value="Изделие-операция" vertex="1">
+          <mxGeometry height="370" width="480" x="670" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="attribute_technology_operation__id" parent="class_technology_operation" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" tooltip="id" value="+Идентификатор" vertex="1">
+          <mxGeometry height="22" width="480" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="attribute_technology_operation__number" parent="class_technology_operation" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" tooltip="number" value="+Номер" vertex="1">
+          <mxGeometry height="22" width="480" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="attribute_technology_operation__name" parent="class_technology_operation" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" tooltip="name" value="+Имя" vertex="1">
+          <mxGeometry height="22" width="480" y="76" as="geometry" />
+        </mxCell>
+        <mxCell id="attribute_technology_operation__kind" parent="class_technology_operation" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" tooltip="kind" value="+Вид" vertex="1">
+          <mxGeometry height="22" width="480" y="98" as="geometry" />
+        </mxCell>
+        <mxCell id="attribute_technology_operation__is_output" parent="class_technology_operation" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" tooltip="is_output" value="+ВыходнаяОперация" vertex="1">
+          <mxGeometry height="22" width="480" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="attribute_technology_operation__template_step_number" parent="class_technology_operation" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" tooltip="template_step_number" value="+НомерШагаШаблона" vertex="1">
+          <mxGeometry height="22" width="480" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="attribute_technology_operation__setup_minutes" parent="class_technology_operation" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" tooltip="setup_minutes" value="+ПодготовительноеВремя" vertex="1">
+          <mxGeometry height="22" width="480" y="162" as="geometry" />
+        </mxCell>
+        <mxCell id="attribute_technology_operation__piece_minutes" parent="class_technology_operation" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" tooltip="piece_minutes" value="+ШтучноеВремя" vertex="1">
+          <mxGeometry height="22" width="480" y="184" as="geometry" />
+        </mxCell>
+        <mxCell id="divider_technology_operation" parent="class_technology_operation" style="line;strokeWidth=1;fillColor=none;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="10" width="480" y="206" as="geometry" />
+        </mxCell>
+        <mxCell id="method_technology_operation__0" parent="class_technology_operation" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" value="+Создать()" vertex="1">
+          <mxGeometry height="22" width="480" y="213" as="geometry" />
+        </mxCell>
+        <mxCell id="method_technology_operation__1" parent="class_technology_operation" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" value="+Получить()" vertex="1">
+          <mxGeometry height="22" width="480" y="235" as="geometry" />
+        </mxCell>
+        <mxCell id="method_technology_operation__2" parent="class_technology_operation" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" value="+Изменить()" vertex="1">
+          <mxGeometry height="22" width="480" y="257" as="geometry" />
+        </mxCell>
+        <mxCell id="method_technology_operation__3" parent="class_technology_operation" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" value="+Удалить()" vertex="1">
+          <mxGeometry height="22" width="480" y="279" as="geometry" />
+        </mxCell>
+        <mxCell id="method_technology_operation__4" parent="class_technology_operation" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" value="+ПолучитьРесурсы()" vertex="1">
+          <mxGeometry height="22" width="480" y="301" as="geometry" />
+        </mxCell>
+        <mxCell id="method_technology_operation__5" parent="class_technology_operation" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" value="+ИмпортироватьСостав()" vertex="1">
+          <mxGeometry height="22" width="480" y="323" as="geometry" />
+        </mxCell>
+        <mxCell id="method_technology_operation__6" parent="class_technology_operation" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" value="+MR_Q()" vertex="1">
+          <mxGeometry height="22" width="480" y="345" as="geometry" />
+        </mxCell>
+        <mxCell id="class_technology_input" parent="1" style="swimlane;fontStyle=1;align=center;startSize=26;container=1;collapsible=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;html=0;" tooltip="technology_input" value="Позиция входного ресурса" vertex="1">
+          <mxGeometry height="160" width="480" x="670" y="980" as="geometry" />
+        </mxCell>
+        <mxCell id="attribute_technology_input__quantity" parent="class_technology_input" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" tooltip="quantity" value="+Количество" vertex="1">
+          <mxGeometry height="22" width="480" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="attribute_technology_input__for_quantity" parent="class_technology_input" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" tooltip="for_quantity" value="+НаКоличество" vertex="1">
+          <mxGeometry height="22" width="480" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="divider_technology_input" parent="class_technology_input" style="line;strokeWidth=1;fillColor=none;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="10" width="480" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="method_technology_input__0" parent="class_technology_input" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" value="+ЗадатьНорму()" vertex="1">
+          <mxGeometry height="22" width="480" y="84" as="geometry" />
+        </mxCell>
+        <mxCell id="method_technology_input__1" parent="class_technology_input" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" value="+Получить()" vertex="1">
+          <mxGeometry height="22" width="480" y="106" as="geometry" />
+        </mxCell>
+        <mxCell id="method_technology_input__2" parent="class_technology_input" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" value="+Удалить()" vertex="1">
+          <mxGeometry height="22" width="480" y="128" as="geometry" />
+        </mxCell>
+        <mxCell id="class_technology_tool_requirement" parent="1" style="swimlane;fontStyle=1;align=center;startSize=26;container=1;collapsible=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;html=0;" tooltip="technology_tool_requirement" value="Требование к средству труда" vertex="1">
+          <mxGeometry height="140" width="480" x="1301" y="996" as="geometry" />
+        </mxCell>
+        <mxCell id="attribute_technology_tool_requirement__quantity" parent="class_technology_tool_requirement" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" tooltip="quantity" value="+Количество" vertex="1">
+          <mxGeometry height="22" width="480" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="divider_technology_tool_requirement" parent="class_technology_tool_requirement" style="line;strokeWidth=1;fillColor=none;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="10" width="480" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="method_technology_tool_requirement__0" parent="class_technology_tool_requirement" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" value="+Задать()" vertex="1">
+          <mxGeometry height="22" width="480" y="62" as="geometry" />
+        </mxCell>
+        <mxCell id="method_technology_tool_requirement__1" parent="class_technology_tool_requirement" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" value="+Получить()" vertex="1">
+          <mxGeometry height="22" width="480" y="84" as="geometry" />
+        </mxCell>
+        <mxCell id="method_technology_tool_requirement__2" parent="class_technology_tool_requirement" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#000000;html=0;" value="+Удалить()" vertex="1">
+          <mxGeometry height="22" width="480" y="106" as="geometry" />
+        </mxCell>
+        <mxCell id="relation_technology_class__parent_id" edge="1" parent="1" source="class_technology_class" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;endArrow=none;labelBackgroundColor=#FFFFFF;startArrow=open;startFill=0;exitX=1;exitY=0.2;entryX=1;entryY=0.7;exitDx=0;exitDy=0;entryDx=0;entryDy=0;innerLoopWaypoints=1;endFill=0;" target="class_technology_class" tooltip="Ассоциация: technology_class &lt;-&gt; technology_class.parent_id" value="">
+          <mxGeometry relative="1" x="-0.5303" y="-12" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="590" y="88.2" />
+              <mxPoint x="590" y="180" />
+              <mxPoint x="540" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_class__parent_id__source" connectable="0" parent="relation_technology_class__parent_id" style="edgeLabel;html=0;align=center;verticalAlign=middle;resizable=0;fontColor=#000000;labelBackgroundColor=#FFFFFF;" value="0..1" vertex="1">
+          <mxGeometry relative="1" x="-1" y="14" as="geometry">
+            <mxPoint x="20" y="30" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_class__parent_id__target" connectable="0" parent="relation_technology_class__parent_id" style="edgeLabel;html=0;align=center;verticalAlign=middle;resizable=0;fontColor=#000000;labelBackgroundColor=#FFFFFF;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="1" y="14" as="geometry">
+            <mxPoint x="6" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AtG1Yf4IVRjyw3KCVW90-1" connectable="0" parent="relation_technology_class__parent_id" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;fontColor=#000000;labelBackgroundColor=#FFFFFF;" value="Родитель" vertex="1">
+          <mxGeometry relative="1" x="-0.1058" y="1" as="geometry">
+            <mxPoint y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_labor_rate__profession_id" edge="1" parent="1" source="class_technology_class" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;endArrow=none;labelBackgroundColor=#FFFFFF;startArrow=open;startFill=0;" target="class_technology_labor_rate" tooltip="Ассоциация: technology_class &lt;-&gt; technology_labor_rate.profession_id" value="Профессия">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="relation_technology_labor_rate__profession_id__source" connectable="0" parent="relation_technology_labor_rate__profession_id" style="edgeLabel;html=0;align=center;verticalAlign=middle;resizable=0;fontColor=#000000;labelBackgroundColor=#FFFFFF;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-1" y="14" as="geometry">
+            <mxPoint x="-4" y="18" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_labor_rate__profession_id__target" connectable="0" parent="relation_technology_labor_rate__profession_id" style="edgeLabel;html=0;align=center;verticalAlign=middle;resizable=0;fontColor=#000000;labelBackgroundColor=#FFFFFF;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="1" y="14" as="geometry">
+            <mxPoint x="-4" y="-11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_application__item_id" edge="1" parent="1" source="method_item__2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;endArrow=none;labelBackgroundColor=#FFFFFF;startArrow=open;startFill=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.084;entryY=0.01;entryDx=0;entryDy=0;entryPerimeter=0;" target="class_technology_application" tooltip="Ассоциация: item &lt;-&gt; technology_application.item_id" value="Изделие">
+          <mxGeometry relative="1" x="-0.1246" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1190" y="215" />
+              <mxPoint x="1190" y="280" />
+              <mxPoint x="1340.3" y="280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_application__item_id__source" connectable="0" parent="relation_technology_application__item_id" style="edgeLabel;html=0;align=center;verticalAlign=middle;resizable=0;fontColor=#000000;labelBackgroundColor=#FFFFFF;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-1" y="14" as="geometry">
+            <mxPoint x="20" y="3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_application__item_id__target" connectable="0" parent="relation_technology_application__item_id" style="edgeLabel;html=0;align=center;verticalAlign=middle;resizable=0;fontColor=#000000;labelBackgroundColor=#FFFFFF;" value="0..1" vertex="1">
+          <mxGeometry relative="1" x="1" y="14" as="geometry">
+            <mxPoint x="-20" y="-17" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_application__template_id" edge="1" parent="1" source="class_technology_template" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;endArrow=none;labelBackgroundColor=#FFFFFF;startArrow=open;startFill=0;" target="class_technology_application" tooltip="Ассоциация: technology_template &lt;-&gt; technology_application.template_id" value="ТиповойПроцесс">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="relation_technology_application__template_id__source" connectable="0" parent="relation_technology_application__template_id" style="edgeLabel;html=0;align=center;verticalAlign=middle;resizable=0;fontColor=#000000;labelBackgroundColor=#FFFFFF;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-1" y="14" as="geometry">
+            <mxPoint x="-4" y="22" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_application__template_id__target" connectable="0" parent="relation_technology_application__template_id" style="edgeLabel;html=0;align=center;verticalAlign=middle;resizable=0;fontColor=#000000;labelBackgroundColor=#FFFFFF;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="1" y="14" as="geometry">
+            <mxPoint x="-4" y="-15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_work_center__class_id" edge="1" parent="1" source="method_technology_class__2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;endArrow=none;labelBackgroundColor=#FFFFFF;startArrow=open;startFill=0;entryX=0;entryY=0.112;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" target="class_work_center" tooltip="Ассоциация: technology_class &lt;-&gt; work_center.class_id" value="Класс">
+          <mxGeometry relative="1" x="-0.3527" as="geometry" />
+        </mxCell>
+        <mxCell id="relation_work_center__class_id__target" connectable="0" parent="relation_work_center__class_id" style="edgeLabel;html=0;align=center;verticalAlign=middle;resizable=0;fontColor=#000000;labelBackgroundColor=#FFFFFF;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="1" y="14" as="geometry">
+            <mxPoint x="-20" y="-8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AtG1Yf4IVRjyw3KCVW90-2" connectable="0" parent="relation_work_center__class_id" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;fontColor=#000000;labelBackgroundColor=#FFFFFF;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.9041" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_asset__model_id" edge="1" parent="1" source="class_technology_asset_model" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;endArrow=none;labelBackgroundColor=#FFFFFF;startArrow=open;startFill=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="class_technology_asset" tooltip="Ассоциация: technology_asset_model &lt;-&gt; technology_asset.model_id" value="МодельСредстваТруда">
+          <mxGeometry relative="1" x="0.1218" as="geometry">
+            <Array as="points">
+              <mxPoint x="1230" y="781.5" />
+              <mxPoint x="1230" y="1170" />
+              <mxPoint x="420" y="1170" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_asset__model_id__source" connectable="0" parent="relation_technology_asset__model_id" style="edgeLabel;html=0;align=center;verticalAlign=middle;resizable=0;fontColor=#000000;labelBackgroundColor=#FFFFFF;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-1" y="14" as="geometry">
+            <mxPoint x="-21" y="-21" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_asset__model_id__target" connectable="0" parent="relation_technology_asset__model_id" style="edgeLabel;html=0;align=center;verticalAlign=middle;resizable=0;fontColor=#000000;labelBackgroundColor=#FFFFFF;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="1" y="14" as="geometry">
+            <mxPoint x="-6" y="11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_asset__work_center_id" edge="1" parent="1" source="class_work_center" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;endArrow=none;labelBackgroundColor=#FFFFFF;startArrow=open;startFill=0;" target="class_technology_asset" tooltip="Ассоциация: work_center &lt;-&gt; technology_asset.work_center_id" value="РабочийЦентр">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="relation_technology_asset__work_center_id__source" connectable="0" parent="relation_technology_asset__work_center_id" style="edgeLabel;html=0;align=center;verticalAlign=middle;resizable=0;fontColor=#000000;labelBackgroundColor=#FFFFFF;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-1" y="14" as="geometry">
+            <mxPoint x="-4" y="11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_asset__work_center_id__target" connectable="0" parent="relation_technology_asset__work_center_id" style="edgeLabel;html=0;align=center;verticalAlign=middle;resizable=0;fontColor=#000000;labelBackgroundColor=#FFFFFF;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="1" y="14" as="geometry">
+            <mxPoint x="6" y="-21" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_operation__item_id" edge="1" parent="1" source="class_item" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;endArrow=none;labelBackgroundColor=#FFFFFF;startArrow=open;startFill=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="class_technology_operation" tooltip="Ассоциация: item &lt;-&gt; technology_operation.item_id" value="Изделие">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="relation_technology_operation__item_id__source" connectable="0" parent="relation_technology_operation__item_id" style="edgeLabel;html=0;align=center;verticalAlign=middle;resizable=0;fontColor=#000000;labelBackgroundColor=#FFFFFF;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-1" y="14" as="geometry">
+            <mxPoint x="-4" y="25" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_operation__item_id__target" connectable="0" parent="relation_technology_operation__item_id" style="edgeLabel;html=0;align=center;verticalAlign=middle;resizable=0;fontColor=#000000;labelBackgroundColor=#FFFFFF;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="1" y="14" as="geometry">
+            <mxPoint x="6" y="-20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_operation__class_id" edge="1" parent="1" source="method_technology_class__2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;endArrow=none;labelBackgroundColor=#FFFFFF;startArrow=open;startFill=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.097;entryY=0.001;entryDx=0;entryDy=0;entryPerimeter=0;" target="class_technology_operation" tooltip="Ассоциация: technology_class &lt;-&gt; technology_operation.class_id" value="Класс">
+          <mxGeometry relative="1" x="0.4164" as="geometry">
+            <Array as="points">
+              <mxPoint x="650" y="215" />
+              <mxPoint x="650" y="420" />
+              <mxPoint x="720" y="420" />
+              <mxPoint x="720" y="480.6" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_operation__class_id__source" connectable="0" parent="relation_technology_operation__class_id" style="edgeLabel;html=0;align=center;verticalAlign=middle;resizable=0;fontColor=#000000;labelBackgroundColor=#FFFFFF;" value="0..1" vertex="1">
+          <mxGeometry relative="1" x="-1" y="14" as="geometry">
+            <mxPoint x="20" y="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_operation__class_id__target" connectable="0" parent="relation_technology_operation__class_id" style="edgeLabel;html=0;align=center;verticalAlign=middle;resizable=0;fontColor=#000000;labelBackgroundColor=#FFFFFF;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.5322" y="14" as="geometry">
+            <mxPoint x="31" y="56" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_operation__work_center_id" edge="1" parent="1" source="class_work_center" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;endArrow=none;labelBackgroundColor=#FFFFFF;startArrow=open;startFill=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="attribute_technology_operation__setup_minutes" tooltip="Ассоциация: work_center &lt;-&gt; technology_operation.work_center_id" value="РабочийЦентр">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="650" y="770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_operation__work_center_id__source" connectable="0" parent="relation_technology_operation__work_center_id" style="edgeLabel;html=0;align=center;verticalAlign=middle;resizable=0;fontColor=#000000;labelBackgroundColor=#FFFFFF;" value="0..1" vertex="1">
+          <mxGeometry relative="1" x="-1" y="14" as="geometry">
+            <mxPoint x="30" y="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_operation__work_center_id__target" connectable="0" parent="relation_technology_operation__work_center_id" style="edgeLabel;html=0;align=center;verticalAlign=middle;resizable=0;fontColor=#000000;labelBackgroundColor=#FFFFFF;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="1" y="14" as="geometry">
+            <mxPoint x="-20" y="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_operation__profession_id" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;endArrow=none;labelBackgroundColor=#FFFFFF;startArrow=open;startFill=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;endFill=0;" target="attribute_technology_operation__id" tooltip="Ассоциация: technology_class &lt;-&gt; technology_operation.profession_id" value="Профессия">
+          <mxGeometry relative="1" x="-0.1739" as="geometry">
+            <mxPoint x="540" y="230" as="sourcePoint" />
+            <mxPoint x="910.0000000000002" y="490.5000000000001" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_operation__profession_id__source" connectable="0" parent="relation_technology_operation__profession_id" style="edgeLabel;html=0;align=center;verticalAlign=middle;resizable=0;fontColor=#000000;labelBackgroundColor=#FFFFFF;" value="0..1" vertex="1">
+          <mxGeometry relative="1" x="-1" y="14" as="geometry">
+            <mxPoint x="30" y="25" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_operation__profession_id__target" connectable="0" parent="relation_technology_operation__profession_id" style="edgeLabel;html=0;align=center;verticalAlign=middle;resizable=0;fontColor=#000000;labelBackgroundColor=#FFFFFF;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="1" y="14" as="geometry">
+            <mxPoint x="-20" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_operation__template_id" edge="1" parent="1" source="method_technology_template__2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;endArrow=none;labelBackgroundColor=#FFFFFF;startArrow=open;startFill=0;exitX=0.862;exitY=1.031;exitDx=0;exitDy=0;exitPerimeter=0;" tooltip="Ассоциация: technology_template &lt;-&gt; technology_operation.template_id" value="ТиповойПроцесс">
+          <mxGeometry relative="1" x="0.6944" as="geometry">
+            <Array as="points">
+              <mxPoint x="1713.8" y="290" />
+              <mxPoint x="1800" y="290" />
+              <mxPoint x="1800" y="605.5" />
+            </Array>
+            <mxPoint x="1150" y="605.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_operation__template_id__source" connectable="0" parent="relation_technology_operation__template_id" style="edgeLabel;html=0;align=center;verticalAlign=middle;resizable=0;fontColor=#000000;labelBackgroundColor=#FFFFFF;" value="0..1" vertex="1">
+          <mxGeometry relative="1" x="-1" y="14" as="geometry">
+            <mxPoint x="-4" y="22" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_operation__template_id__target" connectable="0" parent="relation_technology_operation__template_id" style="edgeLabel;html=0;align=center;verticalAlign=middle;resizable=0;fontColor=#000000;labelBackgroundColor=#FFFFFF;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.9999" y="14" as="geometry">
+            <mxPoint x="20" y="-30" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_input__out_operation_id" edge="1" parent="1" source="class_technology_operation" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;endArrow=none;labelBackgroundColor=#FFFFFF;startArrow=diamondThin;startFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="class_technology_input" tooltip="Композиция: technology_operation &lt;-&gt; technology_input.out_operation_id" value="ПотребляющаяОперация">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="930" y="1120" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_input__out_operation_id__target" connectable="0" parent="relation_technology_input__out_operation_id" style="edgeLabel;html=0;align=center;verticalAlign=middle;resizable=0;fontColor=#000000;labelBackgroundColor=#FFFFFF;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="1" y="14" as="geometry">
+            <mxPoint x="6" y="-20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_input__in_operation_id" edge="1" parent="1" source="class_technology_operation" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;endArrow=none;labelBackgroundColor=#FFFFFF;startArrow=open;startFill=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" target="class_technology_input" tooltip="Ассоциация: technology_operation &lt;-&gt; technology_input.in_operation_id" value="ВходноеСостояние">
+          <mxGeometry relative="1" x="0.5143" as="geometry">
+            <mxPoint x="730" y="1120" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_input__in_operation_id__source" connectable="0" parent="relation_technology_input__in_operation_id" style="edgeLabel;html=0;align=center;verticalAlign=middle;resizable=0;fontColor=#000000;labelBackgroundColor=#FFFFFF;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-1" y="14" as="geometry">
+            <mxPoint x="-24" y="24" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_input__in_operation_id__target" connectable="0" parent="relation_technology_input__in_operation_id" style="edgeLabel;html=0;align=center;verticalAlign=middle;resizable=0;fontColor=#000000;labelBackgroundColor=#FFFFFF;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="1" y="14" as="geometry">
+            <mxPoint x="-34" y="-20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_tool_requirement__operation_id" edge="1" parent="1" source="attribute_technology_operation__setup_minutes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;endArrow=none;labelBackgroundColor=#FFFFFF;startArrow=diamondThin;startFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" target="method_technology_tool_requirement__2" tooltip="Композиция: technology_operation &lt;-&gt; technology_tool_requirement.operation_id" value="Операция">
+          <mxGeometry relative="1" x="0.7254" as="geometry">
+            <Array as="points">
+              <mxPoint x="1820" y="653" />
+              <mxPoint x="1820" y="1102" />
+            </Array>
+            <mxPoint x="1200" y="650" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_tool_requirement__operation_id__target" connectable="0" parent="relation_technology_tool_requirement__operation_id" style="edgeLabel;html=0;align=center;verticalAlign=middle;resizable=0;fontColor=#000000;labelBackgroundColor=#FFFFFF;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="1" y="14" as="geometry">
+            <mxPoint x="21" y="-26" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_tool_requirement__model_id" edge="1" parent="1" source="class_technology_asset_model" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;endArrow=none;labelBackgroundColor=#FFFFFF;startArrow=open;startFill=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="class_technology_tool_requirement" tooltip="Ассоциация: technology_asset_model &lt;-&gt; technology_tool_requirement.model_id" value="МодельСредстваТруда">
+          <mxGeometry relative="1" x="0.0027" as="geometry" />
+        </mxCell>
+        <mxCell id="relation_technology_tool_requirement__model_id__source" connectable="0" parent="relation_technology_tool_requirement__model_id" style="edgeLabel;html=0;align=center;verticalAlign=middle;resizable=0;fontColor=#000000;labelBackgroundColor=#FFFFFF;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-1" y="14" as="geometry">
+            <mxPoint x="-25" y="14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_tool_requirement__model_id__target" connectable="0" parent="relation_technology_tool_requirement__model_id" style="edgeLabel;html=0;align=center;verticalAlign=middle;resizable=0;fontColor=#000000;labelBackgroundColor=#FFFFFF;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="1" y="14" as="geometry">
+            <mxPoint x="-34" y="-20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
