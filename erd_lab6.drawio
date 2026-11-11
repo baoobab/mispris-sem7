@@ -1,0 +1,390 @@
+<mxfile host="app.diagrams.net" agent="Codex">
+  <diagram id="erd_lab6" name="ER — задание №6">
+    <mxGraphModel dx="3417" dy="676" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1700" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="table_technology_asset_model" parent="1" style="swimlane;fontStyle=0;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=48;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;whiteSpace=wrap;html=0;fontSize=15;" value="Модель средства труда" vertex="1">
+          <mxGeometry height="178" width="440" x="1260" y="630" as="geometry">
+            <mxRectangle height="48" width="440" x="1260" y="790" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="field_technology_asset_model__id" parent="table_technology_asset_model" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="id: integer PK NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="48" as="geometry" />
+        </mxCell>
+        <mxCell id="field_technology_asset_model__code" parent="table_technology_asset_model" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="code: varchar(50) UQ NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="field_technology_asset_model__name" parent="table_technology_asset_model" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="name: varchar(255) NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="field_technology_asset_model__kind" parent="table_technology_asset_model" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="kind: varchar(20) NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="126" as="geometry" />
+        </mxCell>
+        <mxCell id="constraint_technology_asset_model_4" parent="table_technology_asset_model" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="kind: enum" vertex="1">
+          <mxGeometry height="26" width="440" y="152" as="geometry" />
+        </mxCell>
+        <mxCell id="table_technology_class" parent="1" style="swimlane;fontStyle=0;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=48;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;whiteSpace=wrap;html=0;fontSize=15;" value="Класс маршрутной технологии" vertex="1">
+          <mxGeometry height="210" width="440" x="60" y="70" as="geometry">
+            <mxRectangle height="48" width="440" x="60" y="70" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="field_technology_class__id" parent="table_technology_class" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="id: integer PK NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="48" as="geometry" />
+        </mxCell>
+        <mxCell id="field_technology_class__kind" parent="table_technology_class" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="kind: varchar(20) NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="field_technology_class__code" parent="table_technology_class" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="code: varchar(50) NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="field_technology_class__name" parent="table_technology_class" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="name: varchar(255) NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="126" as="geometry" />
+        </mxCell>
+        <mxCell id="field_technology_class__parent_id" parent="table_technology_class" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="parent_id: integer FK NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="152" as="geometry" />
+        </mxCell>
+        <mxCell id="constraint_technology_class_6" parent="table_technology_class" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="kind: enum" vertex="1">
+          <mxGeometry height="26" width="440" y="178" as="geometry" />
+        </mxCell>
+        <mxCell id="table_technology_template" parent="1" style="swimlane;fontStyle=0;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=48;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;whiteSpace=wrap;html=0;fontSize=15;" value="Типовой технологический процесс" vertex="1">
+          <mxGeometry height="152" width="440" x="1260" y="70" as="geometry">
+            <mxRectangle height="48" width="440" x="1260" y="70" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="field_technology_template__id" parent="table_technology_template" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="id: integer PK NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="48" as="geometry" />
+        </mxCell>
+        <mxCell id="field_technology_template__code" parent="table_technology_template" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="code: varchar(50) UQ NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="field_technology_template__name" parent="table_technology_template" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="name: varchar(255) NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="field_technology_template__definition" parent="table_technology_template" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="definition: jsonb NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="126" as="geometry" />
+        </mxCell>
+        <mxCell id="table_item" parent="1" style="swimlane;fontStyle=0;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=48;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;whiteSpace=wrap;html=0;fontSize=15;" value="Изделие" vertex="1">
+          <mxGeometry height="230" width="440" x="650" y="70" as="geometry">
+            <mxRectangle height="48" width="440" x="650" y="70" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="field_item__id" parent="table_item" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="id: integer PK NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="48" as="geometry" />
+        </mxCell>
+        <mxCell id="field_item__item_class_id" parent="table_item" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" tooltip="Внешняя связь с прежней таблицей: item_classifier.id" value="item_class_id: integer FK ext NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="field_item__number" parent="table_item" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="number: varchar(50) UQ NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="field_item__article" parent="table_item" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="article: varchar(100) NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="126" as="geometry" />
+        </mxCell>
+        <mxCell id="field_item__name" parent="table_item" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="name: varchar(500) NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="152" as="geometry" />
+        </mxCell>
+        <mxCell id="field_item__item_type_id" parent="table_item" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" tooltip="Внешняя связь с прежней таблицей: enum_value.id" value="item_type_id: integer FK ext NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="178" as="geometry" />
+        </mxCell>
+        <mxCell id="field_item__base_item_id" parent="table_item" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="base_item_id: integer FK NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="204" as="geometry" />
+        </mxCell>
+        <mxCell id="table_technology_labor_rate" parent="1" style="swimlane;fontStyle=0;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=48;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;whiteSpace=wrap;html=0;fontSize=15;" value="Часовая ставка" vertex="1">
+          <mxGeometry height="130" width="440" x="60" y="340" as="geometry">
+            <mxRectangle height="48" width="440" x="60" y="430" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="field_technology_labor_rate__profession_id" parent="table_technology_labor_rate" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="profession_id: integer PK FK NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="48" as="geometry" />
+        </mxCell>
+        <mxCell id="field_technology_labor_rate__qualification_id" parent="table_technology_labor_rate" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" tooltip="Внешняя связь с прежней таблицей: enum_value.id" value="qualification_id: integer PK FK ext NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="field_technology_labor_rate__hourly_rate" parent="table_technology_labor_rate" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="hourly_rate: numeric(18, 2) NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="table_technology_application" parent="1" style="swimlane;fontStyle=0;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=48;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;whiteSpace=wrap;html=0;fontSize=15;" value="Применение типового технологического процесса" vertex="1">
+          <mxGeometry height="152" width="440" x="1260" y="430" as="geometry">
+            <mxRectangle height="48" width="440" x="1260" y="430" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="field_technology_application__item_id" parent="table_technology_application" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="item_id: integer PK FK NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="48" as="geometry" />
+        </mxCell>
+        <mxCell id="field_technology_application__template_id" parent="table_technology_application" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="template_id: integer FK NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="field_technology_application__parameters" parent="table_technology_application" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="parameters: jsonb NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="field_technology_application__resources" parent="table_technology_application" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="resources: jsonb NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="126" as="geometry" />
+        </mxCell>
+        <mxCell id="table_work_center" parent="1" style="swimlane;fontStyle=0;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=48;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;whiteSpace=wrap;html=0;fontSize=15;" value="Групповой рабочий центр" vertex="1">
+          <mxGeometry height="178" width="440" x="60" y="520" as="geometry">
+            <mxRectangle height="48" width="440" x="60" y="760" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="field_work_center__id" parent="table_work_center" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="id: integer PK NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="48" as="geometry" />
+        </mxCell>
+        <mxCell id="field_work_center__code" parent="table_work_center" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="code: varchar(50) UQ NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="field_work_center__name" parent="table_work_center" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="name: varchar(255) NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="field_work_center__class_id" parent="table_work_center" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="class_id: integer FK NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="126" as="geometry" />
+        </mxCell>
+        <mxCell id="field_work_center__sxd_id" parent="table_work_center" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" tooltip="Внешняя связь с прежней таблицей: sxd.id" value="sxd_id: integer FK ext NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="152" as="geometry" />
+        </mxCell>
+        <mxCell id="table_technology_asset" parent="1" style="swimlane;fontStyle=0;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=48;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;whiteSpace=wrap;html=0;fontSize=15;" value="Инвентарная единица средства труда" vertex="1">
+          <mxGeometry height="152" width="440" x="60" y="760" as="geometry">
+            <mxRectangle height="48" width="440" x="60" y="1140" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="field_technology_asset__id" parent="table_technology_asset" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="id: integer PK NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="48" as="geometry" />
+        </mxCell>
+        <mxCell id="field_technology_asset__inventory_number" parent="table_technology_asset" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="inventory_number: varchar(50) UQ NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="field_technology_asset__model_id" parent="table_technology_asset" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="model_id: integer FK NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="field_technology_asset__work_center_id" parent="table_technology_asset" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="work_center_id: integer FK NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="126" as="geometry" />
+        </mxCell>
+        <mxCell id="table_technology_operation" parent="1" style="swimlane;fontStyle=0;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=48;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;whiteSpace=wrap;html=0;fontSize=15;" value="Изделие-операция" vertex="1">
+          <mxGeometry height="568" width="440" x="650" y="470" as="geometry">
+            <mxRectangle height="48" width="440" x="650" y="470" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="field_technology_operation__id" parent="table_technology_operation" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="id: integer PK NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="48" as="geometry" />
+        </mxCell>
+        <mxCell id="field_technology_operation__item_id" parent="table_technology_operation" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="item_id: integer FK NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="field_technology_operation__output_unit_id" parent="table_technology_operation" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" tooltip="Внешняя связь с прежней таблицей: unit_quantity.id" value="output_unit_id: integer FK ext NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="field_technology_operation__number" parent="table_technology_operation" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="number: integer NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="126" as="geometry" />
+        </mxCell>
+        <mxCell id="field_technology_operation__name" parent="table_technology_operation" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="name: varchar(255) NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="152" as="geometry" />
+        </mxCell>
+        <mxCell id="field_technology_operation__kind" parent="table_technology_operation" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="kind: varchar(20) NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="178" as="geometry" />
+        </mxCell>
+        <mxCell id="field_technology_operation__is_output" parent="table_technology_operation" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="is_output: boolean NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="204" as="geometry" />
+        </mxCell>
+        <mxCell id="field_technology_operation__class_id" parent="table_technology_operation" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="class_id: integer FK NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="field_technology_operation__work_center_id" parent="table_technology_operation" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="work_center_id: integer FK NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="256" as="geometry" />
+        </mxCell>
+        <mxCell id="field_technology_operation__profession_id" parent="table_technology_operation" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="profession_id: integer FK NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="282" as="geometry" />
+        </mxCell>
+        <mxCell id="field_technology_operation__qualification_id" parent="table_technology_operation" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" tooltip="Внешняя связь с прежней таблицей: enum_value.id" value="qualification_id: integer FK ext NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="308" as="geometry" />
+        </mxCell>
+        <mxCell id="field_technology_operation__template_id" parent="table_technology_operation" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="template_id: integer FK NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="334" as="geometry" />
+        </mxCell>
+        <mxCell id="field_technology_operation__template_step_number" parent="table_technology_operation" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="template_step_number: integer NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="field_technology_operation__setup_minutes" parent="table_technology_operation" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="setup_minutes: numeric(24, 9) NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="386" as="geometry" />
+        </mxCell>
+        <mxCell id="field_technology_operation__piece_minutes" parent="table_technology_operation" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="piece_minutes: numeric(24, 9) NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="412" as="geometry" />
+        </mxCell>
+        <mxCell id="constraint_technology_operation_15" parent="table_technology_operation" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="UQ (item_id, number)" vertex="1">
+          <mxGeometry height="26" width="440" y="438" as="geometry" />
+        </mxCell>
+        <mxCell id="constraint_technology_operation_16" parent="table_technology_operation" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="UQ (item_id) WHERE is_output" vertex="1">
+          <mxGeometry height="26" width="440" y="464" as="geometry" />
+        </mxCell>
+        <mxCell id="constraint_technology_operation_17" parent="table_technology_operation" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="kind: purchase | production" vertex="1">
+          <mxGeometry height="26" width="440" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="constraint_technology_operation_18" parent="table_technology_operation" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="production: class_id, work_center_id," vertex="1">
+          <mxGeometry height="26" width="440" y="516" as="geometry" />
+        </mxCell>
+        <mxCell id="constraint_technology_operation_19" parent="table_technology_operation" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="profession_id, qualification_id NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="542" as="geometry" />
+        </mxCell>
+        <mxCell id="table_technology_input" parent="1" style="swimlane;fontStyle=0;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=48;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;whiteSpace=wrap;html=0;fontSize=15;" value="Позиция входного ресурса" vertex="1">
+          <mxGeometry height="178" width="440" x="650" y="1080" as="geometry">
+            <mxRectangle height="48" width="440" x="650" y="1230" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="field_technology_input__out_operation_id" parent="table_technology_input" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="out_operation_id: integer PK FK NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="48" as="geometry" />
+        </mxCell>
+        <mxCell id="field_technology_input__in_operation_id" parent="table_technology_input" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="in_operation_id: integer PK FK NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="field_technology_input__quantity" parent="table_technology_input" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="quantity: numeric(24, 9) NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="field_technology_input__for_quantity" parent="table_technology_input" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="for_quantity: numeric(24, 9) NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="126" as="geometry" />
+        </mxCell>
+        <mxCell id="field_technology_input__unit_quantity_id" parent="table_technology_input" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" tooltip="Внешняя связь с прежней таблицей: unit_quantity.id" value="unit_quantity_id: integer FK ext NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="152" as="geometry" />
+        </mxCell>
+        <mxCell id="table_technology_tool_requirement" parent="1" style="swimlane;fontStyle=0;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=48;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;whiteSpace=wrap;html=0;fontSize=15;" value="Требование к средству труда" vertex="1">
+          <mxGeometry height="126" width="440" x="1260" y="850" as="geometry">
+            <mxRectangle height="48" width="440" x="1260" y="1150" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="field_technology_tool_requirement__operation_id" parent="table_technology_tool_requirement" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="operation_id: integer PK FK NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="48" as="geometry" />
+        </mxCell>
+        <mxCell id="field_technology_tool_requirement__model_id" parent="table_technology_tool_requirement" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="model_id: integer PK FK NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="field_technology_tool_requirement__quantity" parent="table_technology_tool_requirement" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=0;" value="quantity: integer NOT NULL" vertex="1">
+          <mxGeometry height="26" width="440" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="relation_technology_class_parent_id" edge="1" parent="1" source="field_technology_class__id" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERzeroToOne;startFill=0;endArrow=ERzeroToMany;endFill=0;startSize=16;endSize=16;strokeWidth=1;exitX=0;exitY=0.5;entryX=0;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" target="field_technology_class__parent_id" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="10" y="131" />
+              <mxPoint x="10" y="235" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_item_base_item_id" edge="1" parent="1" source="field_item__id" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERzeroToOne;startFill=0;endArrow=ERzeroToMany;endFill=0;startSize=16;endSize=16;strokeWidth=1;exitX=0;exitY=0.5;entryX=0;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" target="field_item__base_item_id" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="605" y="131" />
+              <mxPoint x="605" y="287" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_labor_rate_profession_id" edge="1" parent="1" source="field_technology_class__id" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;startSize=16;endSize=16;strokeWidth=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="field_technology_labor_rate__profession_id" value="">
+          <mxGeometry relative="1" x="-0.2343" as="geometry">
+            <Array as="points">
+              <mxPoint x="10" y="131" />
+              <mxPoint x="10" y="401.18" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_application_item_id" edge="1" parent="1" source="field_item__id" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToOne;endFill=0;startSize=16;endSize=16;strokeWidth=1;" target="field_technology_application__item_id" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="relation_technology_application_template_id" edge="1" parent="1" source="field_technology_template__id" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;startSize=16;endSize=16;strokeWidth=1;" target="field_technology_application__template_id" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1210" y="131" />
+              <mxPoint x="1210" y="324" />
+              <mxPoint x="1750" y="324" />
+              <mxPoint x="1750" y="517" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_work_center_class_id" edge="1" parent="1" source="field_technology_class__id" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;startSize=16;endSize=16;strokeWidth=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="field_work_center__class_id" value="">
+          <mxGeometry relative="1" x="0.234" as="geometry">
+            <Array as="points">
+              <mxPoint y="131" />
+              <mxPoint y="660" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_asset_model_id" edge="1" parent="1" source="field_technology_asset_model__id" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;startSize=16;endSize=16;strokeWidth=1;" target="field_technology_asset__model_id" value="">
+          <mxGeometry relative="1" x="-0.2551" as="geometry">
+            <Array as="points">
+              <mxPoint x="1210" y="691" />
+              <mxPoint x="1210" y="1280" />
+              <mxPoint x="560" y="1280" />
+              <mxPoint x="560" y="873" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_asset_work_center_id" edge="1" parent="1" source="field_work_center__id" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;startSize=16;endSize=16;strokeWidth=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="field_technology_asset__work_center_id" value="">
+          <mxGeometry relative="1" x="-0.2363" as="geometry">
+            <Array as="points">
+              <mxPoint x="10" y="581" />
+              <mxPoint x="10" y="900" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_operation_item_id" edge="1" parent="1" source="field_item__id" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;startSize=16;endSize=16;strokeWidth=1;" target="field_technology_operation__item_id" value="">
+          <mxGeometry relative="1" x="0.0184" as="geometry">
+            <Array as="points">
+              <mxPoint x="590" y="131" />
+              <mxPoint x="590" y="344" />
+              <mxPoint x="1140" y="344" />
+              <mxPoint x="1140" y="557" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_operation_class_id" edge="1" parent="1" source="field_technology_class__id" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERzeroToOne;startFill=0;endArrow=ERzeroToMany;endFill=0;startSize=16;endSize=16;strokeWidth=1;" target="field_technology_operation__class_id" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="relation_technology_operation_work_center_id" edge="1" parent="1" source="field_work_center__id" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERzeroToOne;startFill=0;endArrow=ERzeroToMany;endFill=0;startSize=16;endSize=16;strokeWidth=1;" target="field_technology_operation__work_center_id" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="550" y="581" />
+              <mxPoint x="550" y="739" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_operation_profession_id" edge="1" parent="1" source="field_technology_class__id" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERzeroToOne;startFill=0;endArrow=ERzeroToMany;endFill=0;startSize=16;endSize=16;strokeWidth=1;" target="field_technology_operation__profession_id" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="560" y="131" />
+              <mxPoint x="560" y="765" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_operation_template_id" edge="1" parent="1" source="field_technology_template__id" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERzeroToOne;startFill=0;endArrow=ERzeroToMany;endFill=0;startSize=16;endSize=16;strokeWidth=1;" target="field_technology_operation__template_id" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="relation_technology_input_out_operation_id" edge="1" parent="1" source="field_technology_operation__id" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;startSize=16;endSize=16;strokeWidth=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="field_technology_input__out_operation_id" value="">
+          <mxGeometry relative="1" x="0.0715" as="geometry">
+            <Array as="points">
+              <mxPoint x="600" y="531" />
+              <mxPoint x="600" y="1141" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_input_in_operation_id" edge="1" parent="1" source="field_technology_operation__id" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;startSize=16;endSize=16;strokeWidth=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="field_technology_input__in_operation_id" value="">
+          <mxGeometry relative="1" x="-0.1341" as="geometry">
+            <Array as="points">
+              <mxPoint x="590" y="531" />
+              <mxPoint x="590" y="1167" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_tool_requirement_operation_id" edge="1" parent="1" source="field_technology_operation__id" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;startSize=16;endSize=16;strokeWidth=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="field_technology_tool_requirement__operation_id" value="">
+          <mxGeometry relative="1" x="0.5832" as="geometry">
+            <Array as="points">
+              <mxPoint x="1160" y="531" />
+              <mxPoint x="1160" y="910" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation_technology_tool_requirement_model_id" edge="1" parent="1" source="field_technology_asset_model__id" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;startSize=16;endSize=16;strokeWidth=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="field_technology_tool_requirement__model_id" value="">
+          <mxGeometry relative="1" x="-0.184" as="geometry">
+            <Array as="points">
+              <mxPoint x="1220" y="691" />
+              <mxPoint x="1220" y="937" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
