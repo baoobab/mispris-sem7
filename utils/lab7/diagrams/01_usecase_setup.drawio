@@ -1,2 +1,37 @@
-<?xml version='1.0' encoding='utf-8'?>
-<mxfile host="app.diagrams.net"><diagram name="01_usecase_setup"><mxGraphModel page="1" pageWidth="900" pageHeight="700"><root><mxCell id="0" /><mxCell id="1" parent="0" /><mxCell id="a" value="Конструктор" parent="1" vertex="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;fontFamily=Arial;fontSize=24;spacing=10;fillColor=#ffffff;strokeColor=#000000;shape=umlActor;verticalLabelPosition=bottom;labelPosition=center;labelWidth=360;"><mxGeometry as="geometry" x="160.0" y="30" width="80" height="125" /></mxCell><mxCell id="p" value="&lt;b&gt;Назначить параметры&lt;/b&gt;&lt;br&gt;&lt;br&gt;типы; диапазоны; единицы&lt;br&gt;обязательность; FLAG_CONF" parent="1" vertex="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;fontFamily=Arial;fontSize=24;spacing=10;fillColor=#ffffff;strokeColor=#000000;shape=ellipse;align=center;fillColor=#fff9b1;strokeColor=#ff0000;"><mxGeometry as="geometry" x="440" y="30" width="440" height="170" /></mxCell><mxCell id="f" value="&lt;b&gt;Описать функции&lt;/b&gt;&lt;br&gt;&lt;br&gt;формальные параметры&lt;br&gt;типы результата; тело" parent="1" vertex="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;fontFamily=Arial;fontSize=24;spacing=10;fillColor=#ffffff;strokeColor=#000000;shape=ellipse;align=center;fillColor=#fff9b1;strokeColor=#ff0000;"><mxGeometry as="geometry" x="20" y="310" width="400" height="170" /></mxCell><mxCell id="r" value="&lt;b&gt;Задать ограничения&lt;/b&gt;&lt;br&gt;&lt;br&gt;выражения и вызовы&lt;br&gt;параметры типового изделия" parent="1" vertex="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;fontFamily=Arial;fontSize=24;spacing=10;fillColor=#ffffff;strokeColor=#000000;shape=ellipse;align=center;fillColor=#fff9b1;strokeColor=#ff0000;"><mxGeometry as="geometry" x="470" y="310" width="410" height="170" /></mxCell><mxCell id="e0" value="назначает" source="a" target="p" parent="1" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;fontFamily=Arial;fontSize=24;labelBackgroundColor=#ffffff;exitX=1.0;exitY=0.496;entryX=0.020317249214364674;entryY=0.3589168380042249;endArrow=open;"><mxGeometry as="geometry" relative="1"><Array as="points" /></mxGeometry></mxCell><mxCell id="e1" value="описывает" source="a" target="f" parent="1" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;fontFamily=Arial;fontSize=24;labelBackgroundColor=#ffffff;exitX=1.0;exitY=0.496;entryX=1.0;entryY=0.5;endArrow=open;"><mxGeometry as="geometry" relative="1"><Array as="points"><mxPoint x="430" y="260" /><mxPoint x="430" y="395.0" /></Array></mxGeometry></mxCell><mxCell id="e2" value="задаёт" source="a" target="r" parent="1" edge="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;fontFamily=Arial;fontSize=24;labelBackgroundColor=#ffffff;exitX=1.0;exitY=0.496;entryX=0.5;entryY=0.0;endArrow=open;"><mxGeometry as="geometry" relative="1"><Array as="points"><mxPoint x="420" y="245" /><mxPoint x="675" y="245" /></Array></mxGeometry></mxCell></root></mxGraphModel></diagram></mxfile>
+<mxfile host="app.diagrams.net">
+  <diagram id="01_usecase_setup" name="Настройка конфигуратора">
+    <mxGraphModel dx="1911" dy="798" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1050" pageHeight="870" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="designer" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=24;align=center;verticalAlign=middle;spacing=4;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;labelPosition=center;labelWidth=240;" value="&lt;b&gt;Конструктор&lt;/b&gt;" vertex="1">
+          <mxGeometry height="120" width="70" x="100" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="template" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=24;align=center;verticalAlign=middle;spacing=4;fillColor=#fff2cc;strokeColor=light-dark(#FF0000,#FFFFFF);strokeWidth=1.5;shape=ellipse;" value="&lt;b&gt;Настройка типового изделия&lt;/b&gt;" vertex="1">
+          <mxGeometry height="130" width="550" x="440" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="parameters" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=24;align=center;verticalAlign=middle;spacing=4;fillColor=#fff2cc;strokeColor=light-dark(#FF0000,#FFFFFF);strokeWidth=1.5;shape=ellipse;" value="&lt;b&gt;Назначение параметров&lt;br&gt;конфигурации&lt;/b&gt;&lt;font style=&quot;font-size:20px&quot;&gt;&lt;br&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="150" width="550" x="440" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="functions" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=24;align=center;verticalAlign=middle;spacing=4;fillColor=#fff2cc;strokeColor=light-dark(#FF0000,#FFFFFF);strokeWidth=1.5;shape=ellipse;" value="&lt;b&gt;Описание функций ограничений&lt;/b&gt;&lt;font style=&quot;font-size:20px&quot;&gt;&lt;br&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="150" width="550" x="440" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="constraints" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=24;align=center;verticalAlign=middle;spacing=4;fillColor=#fff2cc;strokeColor=light-dark(#FF0000,#FFFFFF);strokeWidth=1.5;shape=ellipse;" value="&lt;b&gt;Задание ограничений&lt;br&gt;типового изделия&lt;/b&gt;" vertex="1">
+          <mxGeometry height="150" width="550" x="440" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc0" edge="1" parent="1" source="designer" style="edgeStyle=none;rounded=0;html=1;fontFamily=Arial;fontSize=20;strokeColor=#000000;strokeWidth=1.3;labelBackgroundColor=#ffffff;endArrow=none;endFill=0;dashed=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="template">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc1" edge="1" parent="1" source="designer" style="edgeStyle=none;rounded=0;html=1;fontFamily=Arial;fontSize=20;strokeColor=#000000;strokeWidth=1.3;labelBackgroundColor=#ffffff;endArrow=none;endFill=0;dashed=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="parameters">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc2" edge="1" parent="1" source="designer" style="edgeStyle=none;rounded=0;html=1;fontFamily=Arial;fontSize=20;strokeColor=#000000;strokeWidth=1.3;labelBackgroundColor=#ffffff;endArrow=none;endFill=0;dashed=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="functions">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc3" edge="1" parent="1" source="designer" style="edgeStyle=none;rounded=0;html=1;fontFamily=Arial;fontSize=20;strokeColor=#000000;strokeWidth=1.3;labelBackgroundColor=#ffffff;endArrow=none;endFill=0;dashed=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="constraints">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
