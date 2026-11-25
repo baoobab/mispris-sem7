@@ -178,6 +178,8 @@ class BomService:
         )
 
     def _effective_or_404(self, parent: Item, component_item_id: int, at: datetime) -> dict[str, Any]:
+        if sum(r["component_item_id"] == component_item_id for r in self.calc.effective(parent.id, at)) > 1:
+            raise ConflictError("У компонента несколько условных позиций; изменяйте строку по bom_id через configured-bom")
         row = self.calc.effective_row(parent.id, component_item_id, at)  # type: ignore[arg-type]
         if row is None:
             raise NotFoundError(
@@ -261,6 +263,7 @@ class BomService:
             b = boms[bom_id]
             return BomVersion(
                 bom_id=b.id, component_item_id=b.component_item_id,
+                configuration_function_id=b.configuration_function_id,
                 component_name=names.get(b.component_item_id, {}).get("component_name", ""),
                 quantity=b.quantity, for_quantity=b.for_quantity, is_excluded=b.is_excluded,
                 valid_from=b.valid_from, valid_to=b.valid_to,
@@ -321,6 +324,7 @@ class BomService:
         eff = self._effective_or_404(parent, component_item_id, at)
         values = {
             "quantity": data.quantity if data.quantity is not None else eff["quantity"],
+            "configuration_function_id": eff.get("configuration_function_id"),
             "for_quantity": data.for_quantity if data.for_quantity is not None else eff["for_quantity"],
             "unit_quantity_id": (
                 self._resolve_unit(data.unit_quantity_id, component)
@@ -372,6 +376,7 @@ class BomService:
                 "quantity": data.quantity,
                 "for_quantity": data.for_quantity,
                 "unit_quantity_id": self._resolve_unit(data.unit_quantity_id, new_component),
+                "configuration_function_id": eff.get("configuration_function_id"),
                 "is_base": eff["is_base"],
                 "is_excluded": False,
                 "order_number": eff["order_number"],

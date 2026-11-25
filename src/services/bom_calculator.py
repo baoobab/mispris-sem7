@@ -41,20 +41,22 @@ class BomCalculator:
         базовых изделий; для каждого компонента берётся ближайшая к изделию версия."""
         chain = self._base_chain(item_id)
         level = {iid: lvl for lvl, iid in enumerate(chain)}
-        chosen: dict[int, tuple[int, Any]] = {}
+        chosen: dict[tuple[int, Optional[int]], tuple[int, Any]] = {}
         for row in self.boms.rows_at(chain, at):
             lvl = level[row.parent_item_id]
             if lvl > 0 and not row.is_base:
                 continue  # строка без флага базы действует только у своего изделия
-            best = chosen.get(row.component_item_id)
+            key = (row.component_item_id, getattr(row, "configuration_function_id", None))
+            best = chosen.get(key)
             if best is None or lvl < best[0]:
-                chosen[row.component_item_id] = (lvl, row)
+                chosen[key] = (lvl, row)
         result = []
         for lvl, row in chosen.values():
             if row.is_excluded and not include_excluded:
                 continue
             result.append({
                 "bom_id": row.id,
+                "configuration_function_id": getattr(row, "configuration_function_id", None),
                 "owner_item_id": row.parent_item_id,
                 "inherit_level": lvl,
                 "inherited": lvl > 0,

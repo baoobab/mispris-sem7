@@ -66,10 +66,35 @@ class RuleRepository:
 
     def definition(self, function_id):
         definition=self.session.get(RuleFunctionDefinition,function_id)
-        if definition is None: raise BusinessRuleError("Не задано определение функции")
+        if definition is None:
+            return self.bom_definition(function_id)
         args=sorted(self.rows(RuleFormalArgument,function_id=function_id),key=lambda r:r.number)
         return {"parameters":{arg.name:arg.value_type for arg in args},"result":definition.result_type,
                 "body":self.expression(definition.body_id)}
+
+    def bom_definition(self, function_id):
+        """Адаптер тела ДНФ №8 к существующему интерпретатору №7, без копии правил."""
+        from src.models.configured_bom import BomFunction, BomConjunction, BomPredicate
+        from src.models.parameters import Parameter
+        if self.session.get(BomFunction, function_id) is None:
+            raise BusinessRuleError("Не задано определение функции")
+        parameters, groups = {}, []
+        for group in sorted(self.rows(BomConjunction, function_id=function_id), key=lambda r:r.number):
+            predicates = []
+            for p in sorted(self.rows(BomPredicate, function_id=function_id,
+                                      conjunction_number=group.number), key=lambda r:r.number):
+                parameter = self.session.get(Parameter,p.parameter_id)
+                parameters[parameter.code] = "string" if p.value_text is not None else "number"
+                value = p.value_number if p.value_number is not None else (
+                    p.enum_value_id if p.enum_value_id is not None else p.value_text)
+                predicates.append({"kind":"op", "op":self.session.get(RuleOperator,p.operator_id).code,
+                                   "args":[{"kind":"param","name":parameter.code},
+                                           {"kind":"const","value":value}]})
+            groups.append({"kind":"op","op":"and","args":predicates} if len(predicates)>1 else
+                          predicates[0] if predicates else {"kind":"const","value":True})
+        body = {"kind":"op","op":"or","args":groups} if len(groups)>1 else (
+            groups[0] if groups else {"kind":"const","value":False})
+        return {"parameters":parameters,"result":"bool","body":body}
 
     def constraint(self, constraint_id):
         root=self.session.get(RuleConstraintRoot,constraint_id)

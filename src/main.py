@@ -29,7 +29,8 @@ app = FastAPI(
         "параметры, справочник изделий, хозяйственные операции (№4) и материальные спецификации "
         "изделий — BOM, модификации, история изменений, сводные нормы расхода (№5). "
         "Маршрутная технология, типовые процессы, нормы расхода, трудоёмкость и себестоимость (№6). "
-        "Конфигурируемые изделия, варианты исполнения, сложные ограничения и заказы (№7)."
+        "Конфигурируемые изделия, варианты исполнения, сложные ограничения и заказы (№7). "
+        "Условные позиции BOM, функции ДНФ, состав варианта и сводные нормы расхода (№8)."
     ),
 )
 
@@ -74,6 +75,9 @@ apply_summaries(app)
 # Операции №7 содержат русские summary непосредственно в декораторах.
 from src.routers.configuration import router as configuration_router
 app.include_router(configuration_router, prefix="/api/configuration", tags=["Конфигурации и заказы (№7)"])
+
+from src.routers.configured_bom import router as configured_bom_router
+app.include_router(configured_bom_router, prefix="/api/configured-bom", tags=["Спецификации с вариантами (№8)"])
 
 
 @app.get("/openapi-lab7.json", include_in_schema=False)

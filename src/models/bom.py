@@ -28,6 +28,7 @@ class ItemBom(SQLModel, table=True):
             "ux_item_bom_active_component",
             "parent_item_id",
             "component_item_id",
+            text("coalesce(configuration_function_id,0)"),
             unique=True,
             postgresql_where=text("valid_to IS NULL"),
         ),
@@ -38,6 +39,7 @@ class ItemBom(SQLModel, table=True):
     id: Optional[int] = Field(default=None, primary_key=True)
     parent_item_id: int = Field(foreign_key="item.id")
     component_item_id: int = Field(foreign_key="item.id")
+    configuration_function_id: Optional[int] = Field(default=None, foreign_key="bom_function.function_id")
     quantity: Decimal = Field(decimal_places=6, max_digits=18)
     for_quantity: Decimal = Field(default=Decimal("1"), decimal_places=6, max_digits=18)
     unit_quantity_id: Optional[int] = Field(default=None, foreign_key="unit_quantity.id", ondelete="RESTRICT")

@@ -61,6 +61,7 @@ class BomRowRead(SQLModel):
     """Строка действующей спецификации (один уровень)."""
 
     bom_id: int
+    configuration_function_id: Optional[int] = None
     owner_item_id: int
     inherited: bool
     inherit_level: int
@@ -143,6 +144,7 @@ class NormsRead(SQLModel):
 
 class BomVersion(SQLModel):
     bom_id: int
+    configuration_function_id: Optional[int] = None
     component_item_id: int
     component_name: str
     quantity: Decimal

@@ -1,5 +1,6 @@
 # Импорт всех моделей необходим для регистрации в SQLModel.metadata (используется Alembic)
 from src.models.bom import ItemBom, ItemChange
+from src.models.configured_bom import BomFunction, BomConjunction, BomPredicate
 from src.models.classifiers import DocumentClassifier, HoClassifier, ItemClassifier, SxdClassifier
 from src.models.enums import EnumType, EnumValue
 from src.models.ho import DocClassParameter, Document, Ho, HoClassParameter, SxdRoleInHo
