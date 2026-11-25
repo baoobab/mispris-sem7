@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" version="24.7.17">
+  <diagram id="01_usecase_catalog" name="Подготовка справочников">
+    <mxGraphModel dx="1100" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="800" math="0" shadow="0" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="constructor" value="&lt;b&gt;Конструктор&lt;/b&gt;" style="shape=umlActor;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontFamily=Arial;fontSize=22;verticalLabelPosition=bottom;verticalAlign=top;align=center;labelWidth=220;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="60" y="320" width="65" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="classifier" value="&lt;b&gt;Ведение классификатора&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=24;fontColor=#000000;fillColor=#fff2cc;strokeColor=#ff0000;strokeWidth=1.5;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="240" y="60" width="350" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="enums" value="&lt;b&gt;Описание&lt;br&gt;перечислений&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=24;fontColor=#000000;fillColor=#fff2cc;strokeColor=#ff0000;strokeWidth=1.5;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="780" y="60" width="300" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="parameters" value="&lt;b&gt;Ведение справочника&lt;br&gt;параметров&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=24;fontColor=#000000;fillColor=#fff2cc;strokeColor=#ff0000;strokeWidth=1.5;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="470" y="330" width="450" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="items" value="&lt;b&gt;Ведение справочника&lt;br&gt;изделий&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=24;fontColor=#000000;fillColor=#fff2cc;strokeColor=#ff0000;strokeWidth=1.5;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="240" y="620" width="350" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="new_item" value="&lt;b&gt;Добавление нового&lt;br&gt;изделия&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=24;fontColor=#000000;fillColor=#fff2cc;strokeColor=#ff0000;strokeWidth=1.5;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="780" y="620" width="300" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_1" value="" style="html=1;rounded=0;endArrow=none;endFill=0;startArrow=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Arial;fontSize=21;fontColor=#000000;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="constructor" target="classifier">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_2" value="" style="html=1;rounded=0;endArrow=none;endFill=0;startArrow=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Arial;fontSize=21;fontColor=#000000;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="constructor" target="items">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_3" value="&lt;&lt;include&gt;&gt;" style="html=1;rounded=0;endArrow=open;endFill=0;startArrow=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Arial;fontSize=21;fontColor=#000000;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;dashPattern=6 4;" edge="1" parent="1" source="classifier" target="enums">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_4" value="&lt;&lt;include&gt;&gt;" style="html=1;rounded=0;endArrow=open;endFill=0;startArrow=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Arial;fontSize=21;fontColor=#000000;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;dashPattern=6 4;" edge="1" parent="1" source="classifier" target="parameters">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_5" value="&lt;&lt;include&gt;&gt;" style="html=1;rounded=0;endArrow=open;endFill=0;startArrow=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Arial;fontSize=21;fontColor=#000000;labelBackgroundColor=#ffffff;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;dashPattern=6 4;" edge="1" parent="1" source="parameters" target="enums">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_6" value="&lt;&lt;include&gt;&gt;" style="html=1;rounded=0;endArrow=open;endFill=0;startArrow=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Arial;fontSize=21;fontColor=#000000;labelBackgroundColor=#ffffff;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;dashPattern=6 4;" edge="1" parent="1" source="items" target="parameters">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_7" value="&lt;&lt;include&gt;&gt;" style="html=1;rounded=0;endArrow=open;endFill=0;startArrow=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Arial;fontSize=21;fontColor=#000000;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;dashPattern=6 4;" edge="1" parent="1" source="items" target="new_item">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

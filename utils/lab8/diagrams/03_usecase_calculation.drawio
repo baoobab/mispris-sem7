@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" version="24.7.17">
+  <diagram id="03_usecase_calculation" name="Формирование спецификации варианта">
+    <mxGraphModel dx="1100" dy="850" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="manager" value="&lt;b&gt;Менеджер по заказам&lt;/b&gt;" style="shape=umlActor;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontFamily=Arial;fontSize=22;verticalLabelPosition=bottom;verticalAlign=top;align=center;labelWidth=220;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="110" y="320" width="65" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="build" value="&lt;b&gt;Формирование спецификации&lt;br&gt;для варианта исполнения&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=24;fontColor=#000000;fillColor=#fff2cc;strokeColor=#ff0000;strokeWidth=1.5;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="340" y="330" width="560" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="values" value="&lt;b&gt;Задание значений&lt;br&gt;параметров&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=24;fontColor=#000000;fillColor=#fff2cc;strokeColor=#ff0000;strokeWidth=1.5;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="430" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="validate" value="&lt;b&gt;Проверка ограничений&lt;br&gt;конфигурации&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=24;fontColor=#000000;fillColor=#fff2cc;strokeColor=#ff0000;strokeWidth=1.5;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="620" y="40" width="430" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="walk" value="&lt;b&gt;Рекурсивный обход&lt;br&gt;спецификации&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=24;fontColor=#000000;fillColor=#fff2cc;strokeColor=#ff0000;strokeWidth=1.5;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="680" width="430" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="norms" value="&lt;b&gt;Расчет сводных&lt;br&gt;норм расхода&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=24;fontColor=#000000;fillColor=#fff2cc;strokeColor=#ff0000;strokeWidth=1.5;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="620" y="680" width="430" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_1" value="" style="html=1;rounded=0;endArrow=none;endFill=0;startArrow=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Arial;fontSize=21;fontColor=#000000;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="manager" target="build">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_2" value="&lt;&lt;include&gt;&gt;" style="html=1;rounded=0;endArrow=open;endFill=0;startArrow=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Arial;fontSize=21;fontColor=#000000;labelBackgroundColor=#ffffff;exitX=0.15;exitY=0;exitDx=0;exitDy=0;entryX=0.65;entryY=1;entryDx=0;entryDy=0;dashed=1;dashPattern=6 4;" edge="1" parent="1" source="build" target="values">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_3" value="&lt;&lt;include&gt;&gt;" style="html=1;rounded=0;endArrow=open;endFill=0;startArrow=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Arial;fontSize=21;fontColor=#000000;labelBackgroundColor=#ffffff;exitX=0.85;exitY=0;exitDx=0;exitDy=0;entryX=0.35;entryY=1;entryDx=0;entryDy=0;dashed=1;dashPattern=6 4;" edge="1" parent="1" source="build" target="validate">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_4" value="&lt;&lt;include&gt;&gt;" style="html=1;rounded=0;endArrow=open;endFill=0;startArrow=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Arial;fontSize=21;fontColor=#000000;labelBackgroundColor=#ffffff;exitX=0.15;exitY=1;exitDx=0;exitDy=0;entryX=0.65;entryY=0;entryDx=0;entryDy=0;dashed=1;dashPattern=6 4;" edge="1" parent="1" source="build" target="walk">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_5" value="&lt;&lt;include&gt;&gt;" style="html=1;rounded=0;endArrow=open;endFill=0;startArrow=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Arial;fontSize=21;fontColor=#000000;labelBackgroundColor=#ffffff;exitX=0.85;exitY=1;exitDx=0;exitDy=0;entryX=0.35;entryY=0;entryDx=0;entryDy=0;dashed=1;dashPattern=6 4;" edge="1" parent="1" source="build" target="norms">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

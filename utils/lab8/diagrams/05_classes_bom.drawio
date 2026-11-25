@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" version="24.7.17">
+  <diagram id="05_classes_bom" name="Класс условной позиции спецификации">
+    <mxGraphModel dx="1120" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1120" pageHeight="700" math="0" shadow="0" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bom" value="Позиция материальной&lt;br&gt;спецификации" style="swimlane;html=1;whiteSpace=wrap;horizontal=1;startSize=76;childLayout=stackLayout;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=0;rounded=0;fillColor=#ffffff;swimlaneFillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontFamily=Arial;fontSize=24;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="320" y="50" width="480" height="498" as="geometry" />
+        </mxCell>
+        <mxCell id="bom_attributes" value="" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;spacingLeft=16;spacingTop=8;fontFamily=Arial;fontSize=22;fontColor=#000000;strokeColor=none;fillColor=none;portConstraint=eastwest;overflow=hidden;" vertex="1" parent="bom">
+          <mxGeometry x="0" y="76" width="480" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="bom_field_0" value="+Идентификатор" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=16;spacing=0;fontFamily=Arial;fontSize=22;fontColor=#000000;strokeColor=none;fillColor=none;portConstraint=eastwest;overflow=hidden;" vertex="1" parent="bom_attributes">
+          <mxGeometry x="0" y="8" width="480" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="bom_field_1" value="+Родительское изделие" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=16;spacing=0;fontFamily=Arial;fontSize=22;fontColor=#000000;strokeColor=none;fillColor=none;portConstraint=eastwest;overflow=hidden;" vertex="1" parent="bom_attributes">
+          <mxGeometry x="0" y="40" width="480" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="bom_field_2" value="+Входящее изделие" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=16;spacing=0;fontFamily=Arial;fontSize=22;fontColor=#000000;strokeColor=none;fillColor=none;portConstraint=eastwest;overflow=hidden;" vertex="1" parent="bom_attributes">
+          <mxGeometry x="0" y="72" width="480" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="bom_field_3" value="+Функция конфигурации" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=16;spacing=0;fontFamily=Arial;fontSize=22;fontColor=#000000;strokeColor=none;fillColor=none;portConstraint=eastwest;overflow=hidden;" vertex="1" parent="bom_attributes">
+          <mxGeometry x="0" y="104" width="480" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="bom_field_4" value="+Расход" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=16;spacing=0;fontFamily=Arial;fontSize=22;fontColor=#000000;strokeColor=none;fillColor=none;portConstraint=eastwest;overflow=hidden;" vertex="1" parent="bom_attributes">
+          <mxGeometry x="0" y="136" width="480" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="bom_field_5" value="+Для количества" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=16;spacing=0;fontFamily=Arial;fontSize=22;fontColor=#000000;strokeColor=none;fillColor=none;portConstraint=eastwest;overflow=hidden;" vertex="1" parent="bom_attributes">
+          <mxGeometry x="0" y="168" width="480" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="bom_field_6" value="+Единица количества" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=16;spacing=0;fontFamily=Arial;fontSize=22;fontColor=#000000;strokeColor=none;fillColor=none;portConstraint=eastwest;overflow=hidden;" vertex="1" parent="bom_attributes">
+          <mxGeometry x="0" y="200" width="480" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="bom_field_7" value="+Флаг базы" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=16;spacing=0;fontFamily=Arial;fontSize=22;fontColor=#000000;strokeColor=none;fillColor=none;portConstraint=eastwest;overflow=hidden;" vertex="1" parent="bom_attributes">
+          <mxGeometry x="0" y="232" width="480" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="bom_field_8" value="+Признак исключения" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=16;spacing=0;fontFamily=Arial;fontSize=22;fontColor=#000000;strokeColor=none;fillColor=none;portConstraint=eastwest;overflow=hidden;" vertex="1" parent="bom_attributes">
+          <mxGeometry x="0" y="264" width="480" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="bom_field_9" value="+Порядковый номер" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=16;spacing=0;fontFamily=Arial;fontSize=22;fontColor=#000000;strokeColor=none;fillColor=none;portConstraint=eastwest;overflow=hidden;" vertex="1" parent="bom_attributes">
+          <mxGeometry x="0" y="296" width="480" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="bom_field_10" value="+Начало действия" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=16;spacing=0;fontFamily=Arial;fontSize=22;fontColor=#000000;strokeColor=none;fillColor=none;portConstraint=eastwest;overflow=hidden;" vertex="1" parent="bom_attributes">
+          <mxGeometry x="0" y="328" width="480" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="bom_field_11" value="+Конец действия" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=16;spacing=0;fontFamily=Arial;fontSize=22;fontColor=#000000;strokeColor=none;fillColor=none;portConstraint=eastwest;overflow=hidden;" vertex="1" parent="bom_attributes">
+          <mxGeometry x="0" y="360" width="480" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="bom_separator" value="" style="line;strokeWidth=1;strokeColor=#000000;fillColor=none;html=1;" vertex="1" parent="bom">
+          <mxGeometry x="0" y="476" width="480" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bom_operations" value="" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;spacingLeft=16;spacingTop=7;fontFamily=Arial;fontSize=22;fontColor=#000000;strokeColor=none;fillColor=none;overflow=hidden;" vertex="1" parent="bom">
+          <mxGeometry x="0" y="477" width="480" height="21" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_1" value="" style="html=1;rounded=0;endArrow=open;endFill=0;startArrow=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Arial;fontSize=21;fontColor=#000000;labelBackgroundColor=#ffffff;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;" edge="1" parent="1" source="bom_field_1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="260" y="182" />
+              <mxPoint x="260" y="170" />
+            </Array>
+            <mxPoint x="20" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_1_s" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontFamily=Arial;fontSize=20;fontColor=#000000;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="edge_1">
+          <mxGeometry x="-0.88" y="20" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_1_t" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontFamily=Arial;fontSize=20;fontColor=#000000;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="edge_1">
+          <mxGeometry x="0.88" y="20" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_1_external" value="Изделие.Идентификатор" style="text;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=21;fontColor=#000000;fillColor=#ffffff;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-20" y="116" width="340" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_2" value="" style="html=1;rounded=0;endArrow=open;endFill=0;startArrow=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Arial;fontSize=21;fontColor=#000000;labelBackgroundColor=#ffffff;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;" edge="1" parent="1" source="bom_field_2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="220" y="214" />
+              <mxPoint x="220" y="390" />
+            </Array>
+            <mxPoint x="20" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_2_s" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontFamily=Arial;fontSize=20;fontColor=#000000;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="edge_2">
+          <mxGeometry x="-0.88" y="20" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_2_t" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontFamily=Arial;fontSize=20;fontColor=#000000;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="edge_2">
+          <mxGeometry x="0.88" y="20" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_2_external" value="Изделие.Идентификатор" style="text;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=21;fontColor=#000000;fillColor=#ffffff;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-20" y="336" width="340" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_3" value="" style="html=1;rounded=0;endArrow=open;endFill=0;startArrow=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Arial;fontSize=21;fontColor=#000000;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;" edge="1" parent="1" source="bom_field_3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="850" y="246" />
+              <mxPoint x="850" y="200" />
+            </Array>
+            <mxPoint x="1100" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_3_s" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontFamily=Arial;fontSize=20;fontColor=#000000;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="edge_3">
+          <mxGeometry x="-0.88" y="20" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_3_t" value="0..1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontFamily=Arial;fontSize=20;fontColor=#000000;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="edge_3">
+          <mxGeometry x="0.88" y="20" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_3_external" value="Тело функции конфигурации&#10;Функция" style="text;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=21;fontColor=#000000;fillColor=#ffffff;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="790" y="116" width="340" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_4" value="" style="html=1;rounded=0;endArrow=open;endFill=0;startArrow=none;strokeColor=#000000;strokeWidth=1.5;fontFamily=Arial;fontSize=21;fontColor=#000000;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;" edge="1" parent="1" source="bom_field_6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="900" y="342" />
+              <mxPoint x="900" y="450" />
+            </Array>
+            <mxPoint x="1100" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_4_s" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontFamily=Arial;fontSize=20;fontColor=#000000;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="edge_4">
+          <mxGeometry x="-0.88" y="20" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_4_t" value="0..1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontFamily=Arial;fontSize=20;fontColor=#000000;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="edge_4">
+          <mxGeometry x="0.88" y="20" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_4_external" value="Единица количества&#10;Идентификатор" style="text;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=21;fontColor=#000000;fillColor=#ffffff;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="790" y="366" width="340" height="56" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
